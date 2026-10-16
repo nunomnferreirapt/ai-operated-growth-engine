@@ -18,7 +18,7 @@ A contact form and an email address. Prospects with a question waited for office
 
 ## What stayed human
 
-Every change to what the bot knows or how it behaves. The handoff of anyone who wants to buy, which goes to a person in sales. And the handover itself: the engagement was set up so we could maintain and update the bot ourselves after the freelancers left, and we did.
+Every change to what the bot knows or how it behaves. The handoff of anyone who wants to buy, which goes to a person in sales. And the handover itself: the engagement was set up so we could maintain what the bot knows ourselves, through pull requests, and we did; the workflow itself stayed with the freelancer on a light maintenance basis.
 
 ## What it did
 
@@ -26,4 +26,4 @@ Two closed deals in four months, one of them logged in the CRM under the name "C
 
 ## What broke
 
-Once, a customer said they wanted to buy, the bot said it had passed the request to sales, and nothing had been sent. The customer waited and then escalated by email. The deal still closed. The fix: the result of every action the bot takes is now checked, and a failed check goes to a person.
+Once, a customer said they wanted to buy, the bot said it had passed the request to sales, and nothing had been sent. The customer waited and then escalated by email. The deal still closed. The lesson became a rule for the handover: verify that every action the bot reports actually ran, and send a failed check to a person.

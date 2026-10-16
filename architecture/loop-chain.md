@@ -1,6 +1,6 @@
 # The weekly loop chain
 
-The skills that had to run every week ran in one chain, in dependency order: index, chatbot drift, playbook, docs drift, fact-check, reviews watch, register re-verify. It replaced seven jobs scheduled at fixed times.
+The skills that had to run every week ran in one chain, in dependency order: index, chatbot drift, playbook, docs drift, fact-check, reviews watch, register re-verify. Seven stages in one chain replaced six jobs that ran at fixed times.
 
 ![The weekly chain](../assets/demo/loop-chain.svg)
 
@@ -10,7 +10,7 @@ The skills that had to run every week ran in one chain, in dependency order: ind
 2. **Chatbot drift.** The chatbot's knowledge base is compared with the fresh vault; differences become a drift report.
 3. **Playbook.** The sales playbook is checked against the same vault.
 4. **Docs drift.** The documentation sites are compared with their sources; gaps become proposed pull requests.
-5. **Fact-check.** Claims in generated content are checked against the vault.
+5. **Fact-check.** The two master sales documents, written by people, are checked against the sources; differences become paste-ready edits for a named approver.
 6. **Reviews watch.** New marketplace reviews are collected, with draft replies.
 7. **Register re-verify.** The list of gaps only a person can close is checked against what was merged that week.
 

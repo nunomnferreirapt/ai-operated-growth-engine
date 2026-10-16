@@ -18,4 +18,4 @@ Pricing, packaging and partner terms. Where the budget went, decided in a monthl
 
 ## What broke
 
-A customer-facing agent once reported an email as sent when it never left. Since then, the result of an action like that is checked, and a failed check goes to a person. See [the chatbot chapter](../evidence/case-studies/03-a-chatbot-that-watches-itself.md).
+A customer-facing agent once reported an email as sent when it never left. The rule that came out of it: the result of an action like that is checked, and a failed check goes to a person. See [the chatbot chapter](../evidence/case-studies/03-a-chatbot-that-watches-itself.md).

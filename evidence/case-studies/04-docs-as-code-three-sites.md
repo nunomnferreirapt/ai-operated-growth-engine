@@ -22,7 +22,7 @@ Nothing reaches a public site without a person reading it page by page. I checke
 
 ## What it did
 
-From a legacy archive nobody used to self-service documentation for new users and deep reference for power users, across the three product suites. A blind evaluation with the same tasks before and after moved the docs from "you need a support ticket for daily work" to "self-serve for most tasks". In October 2026 the process was handed over as two skills, a rulebook and a reviewer checklist. Client success contributes; one reviewer merges.
+From a legacy archive nobody used to self-service documentation for new users and deep reference for power users, across the three product suites. A blind evaluation of the desktop docs, same tasks before and after, moved them from "you need a support ticket for daily work" to "self-serve for most tasks". In October 2026 the process was handed over as two skills, a rulebook and a reviewer checklist. Client success contributes; one reviewer merges.
 
 ## What I would do differently
 

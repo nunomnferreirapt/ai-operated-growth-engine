@@ -4,7 +4,7 @@ A hash per source decides whether anything runs at all. Most weeks, for most ski
 
 ## What it does
 
-Every crawled page and every source file has a hash in a manifest, with the date it was fetched. Before an agent starts, a script compares the current hash with the stored one. Unchanged means skip. Changed means the agent runs on that item only. The manifest is committed with the output, so the diff shows exactly what moved.
+Every source file an agent reads has a hash in a manifest. Before an agent starts, a script compares the current hash with the stored one. Unchanged means skip. Changed means the agent runs on that item only. The manifest is committed with the output, so the diff shows exactly what moved.
 
 ## Why this shape
 
@@ -12,4 +12,4 @@ Agents cost money and attention. A check that costs nothing in front of each one
 
 ## Where it ran
 
-The crawlers, the chatbot drift check, the playbook regeneration (only the chapters whose sources moved) and the docs drift watch. The generic rebuild is in [platform-profile](https://github.com/nunomnferreirapt/platform-profile).
+The docs source pipeline, the transcript extractor, the chatbot drift check and the docs drift watch. The crawlers rebuilt their indexes in full; the generic rebuild in [platform-profile](https://github.com/nunomnferreirapt/platform-profile) extends the manifest to crawled pages, with the date each was fetched.
