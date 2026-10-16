@@ -6,7 +6,7 @@ The unit of proof. Each case study follows the same shape:
 2. **Problem**: what was broken or missing, and why it mattered commercially.
 3. **Constraints**: team size, budget, industry habits, what confidentiality keeps out.
 4. **Approach and decisions**: the decision log, not just the outcome. Why a campaign was throttled, why the gate is architectural, why a disproved assumption was dropped.
-5. **Outcomes**: qualitative, plus the figures already published elsewhere.
+5. **Outcomes**: qualitative, plus relative figures from the public set already on LinkedIn (no euro absolutes, no customer or seat totals).
 6. **What I'd do differently**: one honest paragraph.
 
 | File | Subject | Status |
