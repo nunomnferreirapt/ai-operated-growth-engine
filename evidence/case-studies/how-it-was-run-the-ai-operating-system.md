@@ -40,6 +40,8 @@ flowchart TB
     OUT -.->|next crawl re-reads reality| S
 ```
 
+The diagram shows the part that ran on its own: the weekly loops over the chatbot's knowledge base, the docs and the sales playbook. The monthly reporting had its own rhythm (chapter 5). Paid media and the CRM ran through HubSpot: the agents drafted, people sent and followed up (chapters 1 and 2).
+
 **1. One source of truth.** Everything the product says about itself in public (website, documentation, support articles, marketplace listing) is crawled weekly into one folder under git. One rule: generated text is never a source. The agents cannot quote our own marketing copy back at us.
 
 **2. Skills, not chats.** About twenty repeatable workflows, each written down as a file and run the same way every time. One writes articles: three research agents first, then one writer. One turns any source (a call transcript, a support thread, a spec) into gap lists per product and a pull request on the docs. One strips personal data from transcripts before a model reads them.
@@ -60,8 +62,6 @@ flowchart TB
 ## Did it work?
 
 The business made the shift: subscriptions carry it, the trial is the main way in for new customers, and the numbers are on the front page of this repo. This chapter is about the way of working, so the honest test is a different one: did a small team run a full go-to-market function through 2026 without the work piling up? It did. The docs, the chatbot and the sales playbook stayed current without anyone updating them by hand, campaigns and content kept going, and the time I had went into the decisions rather than the production.
-
-None of this was a solo act. It sat on the work of the product lead and a small delivery team who modernized the product, the release process and the ways of working in parallel.
 
 ## To know more
 

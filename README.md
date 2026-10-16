@@ -4,25 +4,30 @@ The AI operating system that let a team of one run a full go-to-market function:
 
 This repository shows the system as built, sanitized. It is a showcase, not a kit. The case studies explain what ran and why it took this shape, and the architecture notes document the patterns. Customer data, pricing and internal addresses stay out.
 
-## How it is built
+## How it fits together
+
+One box per chapter; the numbers match the Read section below. Each chapter carries its own diagram of that part.
 
 ```mermaid
-flowchart TB
-    subgraph L1["1 · Knowledge substrate"]
-        S[Website · product docs · support KB · marketplace listing<br/>automated crawlers, weekly refresh] --> V[(Git-tracked knowledge vault<br/>one folder, every source)]
+flowchart LR
+    subgraph MO["The motion"]
+        C0["0 · One product, trial first,<br/>online checkout"]
     end
-    subgraph L2["2 · Skills (~20 production agents)"]
-        V --> SK[Content generation · docs pipeline ·<br/>indexing · enablement · analytics]
+    subgraph MA["The machine"]
+        C2["2 · Paid media<br/>ad → form → sequence → a person"] --> C1["1 · CRM<br/>lead → MQL → SQL → deal"]
+        C3["3 · Chatbot<br/>versioned knowledge base"] --> C1
+        C4["4 · Docs, three sites<br/>docs as code"]
     end
-    subgraph L3["3 · Autonomous loops"]
-        SK --> CH[Weekly dependency-ordered chain:<br/>index → chatbot drift → playbook → docs drift →<br/>fact-check → reviews watch → register re-verify]
+    subgraph ST["Steering the business"]
+        C5["5 · Numbers machine<br/>monthly reporting"] --> C6["6 · Financial model<br/>the leadership team could click"]
     end
-    subgraph L4["4 · Human gate"]
-        CH --> P["Proposal packets and PRs<br/>(the system stops here)"]
-        P --> H{Human approves}
+    MO --> MA --> ST
+    subgraph OS["7 · The AI operating system"]
+        direction LR
+        V[(Knowledge vault)] --> SK[~20 skills] --> L[Weekly loops] --> G{{Human gate}}
     end
-    H --> OUT[Chatbot KB · docs sites · ads · emails ·<br/>sales playbook · marketplace replies]
-    OUT -.->|next crawl re-reads reality| S
+    OS -. drafts, proposals, pull requests; a person approves .-> MA
+    OS -. the monthly numbers .-> ST
 ```
 
 The working rule: the system detects and drafts, a person approves. No loop posts, merges or publishes on its own. A loop ends in a proposal, an accepted proposal becomes a pull request, and a person merges it, often Nuno. Every change sits in a history anyone in the team can read.
