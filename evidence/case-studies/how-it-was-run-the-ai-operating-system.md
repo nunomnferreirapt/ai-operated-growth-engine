@@ -22,6 +22,7 @@ So the work became: build an operating system of AI agents that does the repeata
 Of the list above, the pricing, the product decisions and the team were decided by people and stayed that way (more under "What stayed human"). Everything else had repeatable work in it, and that is what the operating system was built to run. Five parts:
 
 ```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 600}}}%%
 flowchart TB
     subgraph L1["1 · Knowledge substrate"]
         S["Website, product docs, support KB, marketplace listing: crawled weekly"] --> V[("Git-tracked knowledge vault, one folder, every source")]

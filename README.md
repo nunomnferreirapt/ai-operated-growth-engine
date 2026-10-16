@@ -9,6 +9,7 @@ This repository shows the system as built, sanitized. It is a showcase, not a ki
 One box per chapter; the numbers match the Read section below. Each chapter carries its own diagram of that part.
 
 ```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 600}}}%%
 flowchart TB
     subgraph OS["7 · The AI operating system"]
         direction LR
