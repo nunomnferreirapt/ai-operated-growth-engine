@@ -25,7 +25,9 @@ flowchart TB
     OUT -.->|next crawl re-reads reality| S
 ```
 
-The working rule: the system detects and drafts, a person approves. No loop posts, merges or publishes on its own. A loop ends in a proposal, an accepted proposal becomes a pull request, and a person merges it, often Nuno himself. Every change sits in a history anyone in the team can read.
+The working rule: the system detects and drafts, a person approves. No loop posts, merges or publishes on its own. A loop ends in a proposal, an accepted proposal becomes a pull request, and a person merges it, often Nuno. Every change sits in a history anyone in the team can read.
+
+The real system belongs to the company it was built for and cannot be published. Three of its patterns are rebuilt fresh, generic and runnable: [platform-profile](https://github.com/nunomnferreirapt/platform-profile) (the git-tracked knowledge profile agents cite, and the manifest that decides what runs), [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline) (parallel research, one writer, a fact-check gate), [source-to-docs](https://github.com/nunomnferreirapt/source-to-docs) (scrub, gap pass, proposal as a pull request, drift watch). Each README says what it rebuilds.
 
 ## What it produced
 
@@ -39,7 +41,9 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 
 ## Read
 
-**Case studies** (`evidence/case-studies/`). Seven chapters on the parts of the engine, and one on how it was run.
+**Start here.** [How it was run: the AI operating system](evidence/case-studies/how-it-was-run-the-ai-operating-system.md): about 20 production skills, a weekly chain of autonomous loops, a human gate on everything customer-facing. The system that let a team of one run everything below.
+
+**Case studies** (`evidence/case-studies/`). Seven chapters on the parts of the engine.
 
 *The motion*
 - [From perpetual licenses to a product-led subscription business](evidence/case-studies/00-from-perpetual-licenses-to-a-product-led-subscription-business.md). Before: an old website that read as documentation for power users, an offering nobody could parse, no self-checkout. After: one product, three variants, trial first, online checkout, and a subscription base that carries the business.
@@ -54,17 +58,12 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 - [The numbers machine: monthly reporting in Python and a Shopify app](evidence/case-studies/05-the-numbers-machine-monthly-reporting-in-python-and-a-shopify-app.md). A rules-based reporting engine on git that turned subscription chains, Shopify orders and cohorts into the monthly reporting done with Fugro corporate finance and a five-year projection; the rules themselves, and why a spreadsheet could not hold them.
 - [A financial model the leadership team could click](evidence/case-studies/06-a-financial-model-the-leadership-team-could-click.md). The five-year model rebuilt as a Lovable app for the investment-committee presentations to Fugro's CEO and CFO: scenarios, levers, one screen per decision, instead of a spreadsheet passed around by email.
 
-*How it was run*
-- [The AI operating system](evidence/case-studies/how-it-was-run-the-ai-operating-system.md): about 20 production skills, a weekly chain of autonomous loops, a human gate on everything customer-facing. The system that let a team of one run all of the above.
-
 **Architecture** (`architecture/`). Short notes on the mechanisms, written from the chapters.
 - [The weekly loop chain](architecture/loop-chain.md): one chain in dependency order instead of jobs on a timer.
 - [The human gate](architecture/human-gate.md): proposal, pull request, a person merges.
 - Patterns: [fan-out and merge](architecture/patterns/fan-out-merge.md) · [parallel research, one writer](architecture/patterns/research-writer.md) · [manifest-driven incremental runs](architecture/patterns/manifest-driven-incremental.md) · [drift watch](architecture/patterns/drift-watch.md).
 
 **Thesis** (`thesis/`). Two short essays: [what stayed human, and why](thesis/what-stayed-human.md) · [the next 18 months of B2B buying](thesis/next-18-months-of-b2b-buying.md).
-
-**Runnable rebuilds.** Three of the patterns exist as fresh, generic tools anyone can run: [platform-profile](https://github.com/nunomnferreirapt/platform-profile), [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline), [source-to-docs](https://github.com/nunomnferreirapt/source-to-docs). Each says what it rebuilds; the originals stayed with the company they were built for.
 
 ## What is left out, and why
 

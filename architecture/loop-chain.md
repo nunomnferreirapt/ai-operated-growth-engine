@@ -18,7 +18,7 @@ Nothing in the chain publishes. Every stage that touches the outside world ends 
 
 ## Why this shape
 
-The first version ran the jobs at fixed times, a few hours apart. When one ran long, the next started on top of it. When a crawl failed quietly, the stages after it worked from last week's sources. In one chain, a failed crawl marks everything after it as failed too. A guard restores the knowledge base when a crawl shrinks it sharply, added after a bad crawl did exactly that. Nuno looked at the results when he had time, saw what had run and what had failed, and acted on it.
+The first version ran the jobs at fixed times, a few hours apart. When one ran long, the next started on top of it. When a crawl failed quietly, the stages after it worked from last week's sources. In one chain, a failed crawl marks everything after it as failed too. A guard restores the knowledge base when a crawl shrinks it sharply, added after a bad crawl did exactly that. The results waited for a person to read them: what had run, what had failed, and what to do about it.
 
 ## What would change next time
 

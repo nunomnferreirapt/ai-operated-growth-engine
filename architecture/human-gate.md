@@ -1,6 +1,6 @@
 # The human gate
 
-No loop posts, merges, sends or publishes on its own. A loop ends in a proposal; if the proposal is accepted, it becomes a pull request; a person merges it, often Nuno himself.
+No loop posts, merges, sends or publishes on its own. A loop ends in a proposal; if the proposal is accepted, it becomes a pull request; a person merges it, often Nuno.
 
 ## How it worked
 
