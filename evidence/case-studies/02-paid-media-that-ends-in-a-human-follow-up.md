@@ -8,7 +8,7 @@ No paid acquisition. The customer base was German-speaking and had arrived by wo
 
 ## What we built
 
-**Segments, not one campaign.** More than 20 segments, cut by market, by role and by the problem the engineer has: migrating off an end-of-life incumbent, logging boreholes in the field, getting ground data into Civil 3D. Each segment got its own creative, its own lead magnet and its own landing. Campaigns ran in the local language across ten markets, including Brazil and Turkey, where the regulatory context does part of the selling.
+**Segments, not one campaign.** More than 20 segments, cut by market, by role and by the problem the engineer has: migrating off an end-of-life incumbent, logging boreholes in the field, getting ground data into Civil 3D. Each segment got its own creative, its own lead magnet and its own landing. Campaigns ran in the local language, including Brazil and Turkey, where the regulatory context does part of the selling.
 
 **Native lead forms into the CRM.** Leads were captured on LinkedIn, not sent to a landing page, and landed in HubSpot with their campaign stamped. From there: a sequence matched to the segment, and a Teams notification tagging the colleague who follows up. The sequences were semi-automated by design. The emails went out on a schedule; the reply was always a person.
 
@@ -18,7 +18,7 @@ No paid acquisition. The customer base was German-speaking and had arrived by wo
 
 ## What stayed human
 
-Where the budget went each month, and which campaigns to kill, scale or hold. The scorecard proposed; I decided, with the sales capacity to follow up as one of the inputs. The copy of every sequence was written and signed by a person.
+Where the budget went each month, and which campaigns to kill, scale or hold. The scorecard proposed; a person decided, usually me. The copy of every sequence was written and signed by a person.
 
 ## What it did
 

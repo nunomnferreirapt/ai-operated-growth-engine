@@ -4,13 +4,13 @@
 
 ## Before
 
-Over a thousand legacy help topics locked in a Windows help database. A public docs site where half the pages were empty stubs. A German support portal that covered what the docs did not. New customers stalled in the trial because the first ten minutes were not documented, and power users emailed support for lookups the product could have answered.
+The legacy help, locked in a Windows help database. A public docs site full of empty stubs. A German support portal that covered what the docs did not. New customers stalled in the trial because the first ten minutes were not documented, and power users emailed support for lookups the product could have answered.
 
 ## What we built
 
 **Docs as a software project.** Three public repositories, one per product, rendered as websites. A private companion repository with the audit, the rulebook and the migration plan. Every legacy help topic was indexed and mapped to a destination page or marked for retirement; the result was a list of work packages, not a vague ambition.
 
-**Drafts from bounded sources.** An AI pipeline turned the sources we had, the legacy help files, anonymized demo transcripts, support articles and recorded walkthroughs, into draft pages and pull requests. Every change cites its source, and every PR carries a table of sources per change. The pipeline may not invent; if no source covers a question, it goes on a list for the people who know the product.
+**Drafts from bounded sources.** An AI pipeline turned the sources we had (the legacy help files, anonymized demo transcripts, support articles and recorded walkthroughs) into draft pages and pull requests. Every change cites its source, and every PR carries a table of sources per change. The pipeline may not invent; if no source covers a question, it goes on a list for the people who know the product.
 
 **Rules in three layers.** Mechanical rules in CI: typography, duplicated content, empty stubs, broken links, changed images. Judgment rules in a rulebook synced into each repo's agent instructions. Procedure in two contribution skills anyone on the team can run.
 

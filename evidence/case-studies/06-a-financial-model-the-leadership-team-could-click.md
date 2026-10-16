@@ -8,7 +8,7 @@ The five-year plan was a spreadsheet. Every investment-committee meeting re-deri
 
 ## What we built
 
-**The model as a file, not a sheet.** Five bets, each a small formula with named dials, in one JSON file. Every dial has a preset for three scenarios, conservative, estimated and ambitious. 2026 is pinned to actuals and never moves; the sliders only move 2027 to 2030. A reconcile script recomputes every bet from its formula and ties the headline totals to the written narrative, so the model cannot quietly drift from the document that explains it.
+**The model as a file, not a sheet.** Five bets, each a small formula with named dials, in one JSON file. Every dial has a preset for three scenarios: conservative, estimated and ambitious. 2026 is pinned to actuals and never moves; the sliders only move 2027 to 2030. A reconcile script recomputes every bet from its formula and ties the headline totals to the written narrative, so the model cannot quietly drift from the document that explains it.
 
 **A page the board can touch.** Built in Lovable from one prompt and the JSON file, in about two hours. One chart, with the headline as stacked bands per bet. Scenario chips that set every dial; the moment someone moves a slider, the chip says "Custom". Per-bet toggles that pull a bet in or out of the headline live. Live KPIs that recompute on every drag: customers, revenue per customer, growth rate. A second chart answers the only question a CFO asks in a cost year: when does this stop needing internal funding, with the cost allocation and the funding line as inputs.
 

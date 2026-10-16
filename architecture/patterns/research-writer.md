@@ -12,8 +12,8 @@ Research in parallel, writing in sequence. Three agents gather claims with quote
 
 ## Why this shape
 
-Research benefits from several views; prose does not. One writer keeps one voice. The check at the end is what let independent industry platforms publish the pieces: every claim could be traced.
+Research benefits from several views; prose does not. One writer keeps one voice. Independent industry platforms published the pieces, and every claim in them could be traced.
 
 ## Where it ran
 
-Long-form articles that independent platforms chose to publish. See [the content chapter](../../evidence/case-studies/02-paid-media-that-ends-in-a-human-follow-up.md) for the surrounding motion and [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline) for the rebuild.
+Long-form articles that independent platforms chose to publish. See [the paid-media chapter](../../evidence/case-studies/02-paid-media-that-ends-in-a-human-follow-up.md) for the surrounding motion and [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline) for the rebuild.

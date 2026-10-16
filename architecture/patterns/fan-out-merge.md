@@ -8,7 +8,7 @@ A task is cut into slices that do not depend on each other. Each slice goes to i
 
 ## Why this shape
 
-Parallel slices are faster, and more important, each agent sees a small, bounded input. Mistakes stay inside a slice and are visible in the merge. The merge step is also where the human gate attaches: what comes out of it is a proposal, never a publication.
+Parallel slices are faster. More important, each agent sees a small, bounded input. Mistakes stay inside a slice and are visible in the merge. The merge step is also where the human gate attaches: what comes out of it is a proposal, never a publication.
 
 ## Where it ran
 

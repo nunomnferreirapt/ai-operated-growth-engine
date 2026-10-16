@@ -1,6 +1,6 @@
 # Thesis
 
-Two short essays, drafted from positions Nuno has stated elsewhere, for his read before anything is final.
+Two short essays.
 
 | Essay | One line | Status |
 |---|---|---|

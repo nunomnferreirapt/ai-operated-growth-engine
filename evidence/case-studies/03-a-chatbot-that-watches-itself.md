@@ -4,7 +4,7 @@
 
 ## Before
 
-A contact form and an email address. Prospects with a question waited for office hours; existing customers with a licensing problem waited longer. The product's own knowledge, pricing, integrations, how to migrate an old license, sat in people's heads and in a German support portal.
+A contact form and an email address. Prospects with a question waited for office hours; existing customers with a licensing problem waited longer. The product's own knowledge (pricing, integrations, how to migrate an old license) sat in people's heads and in a German support portal.
 
 ## What we built
 
@@ -14,7 +14,7 @@ A contact form and an email address. Prospects with a question waited for office
 
 **A weekly drift watch.** Every week a read-only job compares the knowledge base with what the website, the docs and the support articles currently say, and proposes the edits as a pull request. A person reads and merges. The bot never updates itself.
 
-**Guardrails as files.** The rules for what the bot may and may not do are in the same repo and are only ever changed by hand. Real visitors tried the usual things, fake urgency, persona overrides, "which tools are you using". The rules held.
+**Guardrails as files.** The rules for what the bot may and may not do are in the same repo and are only ever changed by hand. Real visitors tried the usual things: fake urgency, persona overrides, "which tools are you using". The rules held.
 
 ## What stayed human
 
@@ -26,4 +26,4 @@ Two closed deals in four months, one of them logged in the CRM under the name "C
 
 ## What broke
 
-Once, a customer said they wanted to buy, the bot said it had passed the request to sales, and nothing had been sent. The customer waited and then escalated by email. The deal still closed, and the fix was structural: the result of every action the bot takes is now checked, and a failed check goes to a person. The failure mode that matters in production is not a wrong answer. It is an action reported and not taken.
+Once, a customer said they wanted to buy, the bot said it had passed the request to sales, and nothing had been sent. The customer waited and then escalated by email. The deal still closed. The fix: the result of every action the bot takes is now checked, and a failed check goes to a person.
