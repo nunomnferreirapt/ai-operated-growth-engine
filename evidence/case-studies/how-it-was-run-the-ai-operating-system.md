@@ -37,10 +37,7 @@ flowchart TB
     V --> L2
     subgraph L3["3 · Two rhythms"]
         direction LR
-        subgraph CH["Weekly chain, on its own"]
-            direction LR
-            s1["index"] --> s2["chatbot drift"] --> s3["playbook"] --> s4["docs drift"] --> s5["fact-check"] --> s6["reviews watch"] --> s7["register re-verify"]
-        end
+        CH["Weekly chain, on its own: index, chatbot drift, playbook, docs drift, fact-check, reviews watch, register re-verify"]
         OD["On demand and monthly, started by a person"]
     end
     D --> CH
