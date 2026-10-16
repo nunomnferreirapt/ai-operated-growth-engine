@@ -19,28 +19,33 @@ So the work became: build an operating system of AI agents that does the repeata
 
 ## How it's built
 
-Five parts:
+Of the list above, the pricing, the product decisions and the team were decided by people and stayed that way (more under "What stayed human"). Everything else had repeatable work in it, and that is what the operating system was built to run. Five parts:
 
 ```mermaid
 flowchart TB
     subgraph L1["1 · Knowledge substrate"]
-        S[Website · product docs · support KB · marketplace listing<br/>automated crawlers, weekly refresh] --> V[(Git-tracked knowledge vault<br/>one folder, every source)]
+        S[Website · product docs · support KB · marketplace listing<br/>crawled weekly] --> V[(Git-tracked knowledge vault<br/>one folder, every source)]
     end
     subgraph L2["2 · Skills (~20 production agents)"]
-        V --> SK[Content generation · docs pipeline ·<br/>indexing · enablement · analytics]
+        V --> A[Campaigns and content<br/>ads, emails, articles]
+        V --> D[Docs and chatbot<br/>gap lists, knowledge base edits]
+        V --> E[Sales enablement<br/>the playbook]
+        V --> R[Reporting<br/>the monthly numbers]
     end
-    subgraph L3["3 · Autonomous loops"]
-        SK --> CH[Weekly dependency-ordered chain:<br/>index → chatbot drift → playbook → docs drift →<br/>fact-check → reviews watch → register re-verify]
+    subgraph L3["3 · Two rhythms"]
+        D --> CH[Weekly chain, on its own:<br/>index → chatbot drift → playbook → docs drift →<br/>fact-check → reviews watch → register re-verify]
+        E --> CH
+        A --> OD[On demand and monthly,<br/>started by a person]
+        R --> OD
     end
     subgraph L4["4 · Human gate"]
         CH --> P["Proposal packets and PRs<br/>(the system stops here)"]
-        P --> H{Human approves}
+        OD --> P
+        P --> H{A person approves}
     end
-    H --> OUT[Chatbot KB · docs sites · ads · emails ·<br/>sales playbook · marketplace replies]
+    H --> OUT[Ads · emails · articles · docs sites · chatbot KB ·<br/>sales playbook · monthly reporting]
     OUT -.->|next crawl re-reads reality| S
 ```
-
-The diagram shows the part that ran on its own: the weekly loops over the chatbot's knowledge base, the docs and the sales playbook. The monthly reporting had its own rhythm (chapter 5). Paid media and the CRM ran through HubSpot: the agents drafted, people sent and followed up (chapters 1 and 2).
 
 **1. One source of truth.** Everything the product says about itself in public (website, documentation, support articles, marketplace listing) is crawled weekly into one folder under git. One rule: generated text is never a source. The agents cannot quote our own marketing copy back at us.
 
