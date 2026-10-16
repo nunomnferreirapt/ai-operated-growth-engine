@@ -10,6 +10,33 @@ GeoDin is Fugro's geotechnical data management software. It has been built in Be
 
 Four moves, roughly in this order.
 
+```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 600}}}%%
+flowchart LR
+    subgraph B["Before"]
+        direction TB
+        B1["Perpetual license plus maintenance, by quote"]
+        B2["Dozens of modules and bundles on the shop page"]
+        B3["German-speaking markets, no trial, no checkout"]
+    end
+    subgraph D["The decisions"]
+        direction TB
+        D1["One product, two variants; no new perpetual licenses"]
+        D2["New terms, prices on the website, a new website"]
+    end
+    subgraph E["Existing customers"]
+        direction TB
+        E1["Segmented by contract type and value"] --> E2["A time-limited offer, by email and letter"] --> E3["Annual subscription"]
+    end
+    subgraph N["New customers"]
+        direction TB
+        N1["Free trial, licensed automatically"] --> N2["Self-checkout, or a person closes"]
+    end
+    B --> D
+    D --> E
+    D --> N
+```
+
 1. **One offer instead of dozens.** The legacy modules were consolidated into one product with per-user pricing. Later it grew into a suite of three: the desktop database, a field app for tablets, and a plug-in for Civil 3D. Prices went on the website. Seat tiers were built so that adding a seat never makes the bill cheaper, which sounds obvious and is not how most volume schedules behave.
 
 2. **A path for the existing base.** Every legacy customer got an offer to move onto an annual subscription priced on value, with a discount schedule that stepped down over the first years. Nobody was forced. 40% of the legacy base migrated, at 3.8 times the average value per customer, so the migrated book alone is 1.5 times the entire 2023 perpetual base. 49 customers who had lapsed came back.
@@ -18,6 +45,14 @@ Four moves, roughly in this order.
 
 4. **Self-checkout.** A Shopify store with published prices, VAT handled per country and prices per country, for the customers who want to buy that way. The checkout is there for the customers who do not want the conversation; for everyone else, a person closes the deal.
 
+![The shop page in 2023 beside the product page after: dozens of options and a PDF order form, then one product with a trial and a checkout](../../assets/chapter-0/offering-before-after.png)
+
+*Left: part of the shop page in 2023, one of dozens of options per row, down to a PDF order form to fax back (prices blurred). Right: the product page after: one product, pick a license type, check out.*
+
+![The website before and after](../../assets/chapter-0/website-before-after.png)
+
+*The website before and after. Traffic went up about 30 times.*
+
 ## What stayed human
 
 Pricing, packaging and the migration terms were decisions, not outputs. So was every deal. The trial opens the conversation; a person closes it.
@@ -25,7 +60,3 @@ Pricing, packaging and the migration terms were decisions, not outputs. So was e
 ## What it did
 
 Subscriptions went from 1% of external sales in 2023 to ~90% expected for 2026, and perpetual licensing from 80% to 0%. External sales went from flat to a 17% CAGR over 2024 to 2026. Net revenue retention is ~110%, value churn 3.4%, with zero churn among new logos. The free trial became the largest entry point for new customers; about 1 in 5 started on one, in a category that mostly buys by PDF quote. The first customers in the US, Belgium, Canada and Lithuania arrived, and the product was sold to Fugro's competitors for the first time in its history.
-
-## What I would do differently
-
-Start the trial and the international motion a year earlier. The migration carried 2025; by 2026 that tailwind was mostly spent, and growth had to come from new customers while the capacity to follow up on them was still being built.
