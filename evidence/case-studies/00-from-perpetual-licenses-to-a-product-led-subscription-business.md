@@ -45,13 +45,17 @@ flowchart LR
 
 4. **Self-checkout.** A Shopify store with published prices, VAT handled per country and prices per country, for the customers who want to buy that way. The checkout is there for the customers who do not want the conversation; for everyone else, a person closes the deal.
 
-![The shop page in 2023 beside the product page after: dozens of options and a PDF order form, then one product with a trial and a checkout](../../assets/chapter-0/offering-before-after.png)
-
-*Left: part of the shop page in 2023, one of dozens of options per row, down to a PDF order form to fax back (prices blurred). Right: the product page after: one product, pick a license type, check out.*
-
 ![The website before and after](../../assets/chapter-0/website-before-after.png)
 
-*The website before and after. Traffic went up about 30 times.*
+*The website before and after: from a brochure site for people who already used the software to a trial-first landing page, and new visitors from Germany to the US and the rest of Europe.*
+
+![The offering before and after](../../assets/chapter-0/offering-before-after.png)
+
+*The offering before and after: fifty options and fully manual licensing on the 2023 shop page; one product, a one-click trial and instant licensing after. The curve: sales outreach, trials and converted trials from mid-2023 to late 2024.*
+
+![The commercial model transformation board](../../assets/chapter-0/migration-plan.png)
+
+*The transformation board: the decisions on the new offering, terms and pricing on the left; on the right, the communication and transition plan for the existing base, segmented by contract type and value.*
 
 ## What stayed human
 
