@@ -9,24 +9,34 @@ This repository shows the system as built, sanitized. It is a showcase, not a ki
 One box per chapter; the numbers match the Read section below. Each chapter carries its own diagram of that part.
 
 ```mermaid
-flowchart LR
-    subgraph MO["The motion"]
-        C0["0 · One product, trial first,<br/>online checkout"]
-    end
-    subgraph MA["The machine"]
-        C2["2 · Paid media<br/>ad → form → sequence → a person"] --> C1["1 · CRM<br/>lead → MQL → SQL → deal"]
-        C3["3 · Chatbot<br/>versioned knowledge base"] --> C1
-        C4["4 · Docs, three sites<br/>docs as code"]
-    end
-    subgraph ST["Steering the business"]
-        C5["5 · Numbers machine<br/>monthly reporting"] --> C6["6 · Financial model<br/>the leadership team could click"]
-    end
-    MO --> MA --> ST
+flowchart TB
     subgraph OS["7 · The AI operating system"]
         direction LR
-        V[(Knowledge vault)] --> SK[~20 skills] --> L[Weekly loops] --> G{{Human gate}}
+        V[("Knowledge vault")] --> SK["~20 skills"] --> L["Weekly loops"] --> G{{"Human gate"}}
     end
-    OS -. drafts, proposals, pull requests; a person approves .-> MA
+    subgraph MO["The motion"]
+        direction LR
+        C0["`0 · One product,
+trial first, online checkout`"]
+    end
+    subgraph MA["The machine"]
+        direction LR
+        C2["`2 · Paid media
+ad, form, sequence, a person`"] --> C1["`1 · CRM
+lead, MQL, SQL, deal`"]
+        C3["`3 · Chatbot
+versioned knowledge base`"] --> C1
+        C4["`4 · Docs, three sites
+docs as code`"]
+    end
+    subgraph ST["Steering the business"]
+        direction LR
+        C5["`5 · Numbers machine
+monthly reporting`"] --> C6["`6 · Financial model
+the leadership team could click`"]
+    end
+    MO --> MA --> ST
+    OS -. drafts and proposals .-> MA
     OS -. the monthly numbers .-> ST
 ```
 

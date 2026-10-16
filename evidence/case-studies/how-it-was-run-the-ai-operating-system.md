@@ -24,26 +24,37 @@ Of the list above, the pricing, the product decisions and the team were decided 
 ```mermaid
 flowchart TB
     subgraph L1["1 · Knowledge substrate"]
-        S[Website · product docs · support KB · marketplace listing<br/>crawled weekly] --> V[(Git-tracked knowledge vault<br/>one folder, every source)]
+        S["`Website, product docs, support KB, marketplace listing
+crawled weekly`"] --> V[("`Git-tracked knowledge vault
+one folder, every source`")]
     end
     subgraph L2["2 · Skills (~20 production agents)"]
-        V --> A[Campaigns and content<br/>ads, emails, articles]
-        V --> D[Docs and chatbot<br/>gap lists, knowledge base edits]
-        V --> E[Sales enablement<br/>the playbook]
-        V --> R[Reporting<br/>the monthly numbers]
+        V --> A["`Campaigns and content
+ads, emails, articles`"]
+        V --> D["`Docs and chatbot
+gap lists, knowledge base edits`"]
+        V --> E["`Sales enablement
+the playbook`"]
+        V --> R["`Reporting
+the monthly numbers`"]
     end
     subgraph L3["3 · Two rhythms"]
-        D --> CH[Weekly chain, on its own:<br/>index → chatbot drift → playbook → docs drift →<br/>fact-check → reviews watch → register re-verify]
+        D --> CH["`Weekly chain, on its own
+index, chatbot drift, playbook, docs drift,
+fact-check, reviews watch, register re-verify`"]
         E --> CH
-        A --> OD[On demand and monthly,<br/>started by a person]
+        A --> OD["`On demand and monthly
+started by a person`"]
         R --> OD
     end
     subgraph L4["4 · Human gate"]
-        CH --> P["Proposal packets and PRs<br/>(the system stops here)"]
+        CH --> P["`Proposal packets and PRs
+the system stops here`"]
         OD --> P
-        P --> H{A person approves}
+        P --> H{"A person approves"}
     end
-    H --> OUT[Ads · emails · articles · docs sites · chatbot KB ·<br/>sales playbook · monthly reporting]
+    H --> OUT["`Ads, emails, articles, docs sites, chatbot KB,
+sales playbook, monthly reporting`"]
     OUT -.->|next crawl re-reads reality| S
 ```
 
