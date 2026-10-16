@@ -11,7 +11,7 @@ One box per chapter; the numbers match the Read section below. Each chapter carr
 ```mermaid
 %%{init: {"flowchart": {"wrappingWidth": 600}}}%%
 flowchart TB
-    subgraph OS["7 · The AI operating system"]
+    subgraph OS["The AI operating system, how it was run"]
         direction LR
         V[("Knowledge vault")] --> SK["~20 skills"] --> L["Weekly loops"] --> G{{"Human gate"}}
     end
