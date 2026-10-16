@@ -57,7 +57,15 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 *How it was run*
 - [The AI operating system](evidence/case-studies/how-it-was-run-the-ai-operating-system.md): about 20 production skills, a weekly chain of autonomous loops, a human gate on everything customer-facing. The system that let a team of one run all of the above.
 
-**Architecture** (`architecture/`). Coming: the weekly loop chain, the human gate, one note each on the four recurring patterns (fan-out and merge, parallel research with a single writer, manifest-driven incremental runs, drift watch), sanitized excerpts of a skill definition, the orchestrator config shape and the PR-gate workflow, and two short essays in `thesis/`: what stayed human, and the next 18 months of B2B buying.
+**Architecture** (`architecture/`). Short notes on the mechanisms, written from the chapters.
+- [The weekly loop chain](architecture/loop-chain.md): one chain in dependency order instead of jobs on a timer.
+- [The human gate](architecture/human-gate.md): proposal, pull request, a person merges.
+- Patterns: [fan-out and merge](architecture/patterns/fan-out-merge.md) · [parallel research, one writer](architecture/patterns/research-writer.md) · [manifest-driven incremental runs](architecture/patterns/manifest-driven-incremental.md) · [drift watch](architecture/patterns/drift-watch.md).
+- Coming: sanitized excerpts of a skill definition, the orchestrator config shape and the PR-gate workflow.
+
+**Thesis** (`thesis/`). Two short essays: [what stayed human, and why](thesis/what-stayed-human.md) · [the next 18 months of B2B buying](thesis/next-18-months-of-b2b-buying.md).
+
+**Runnable rebuilds.** Three of the patterns exist as fresh, generic tools anyone can run: [platform-profile](https://github.com/nunomnferreirapt/platform-profile), [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline), [source-to-docs](https://github.com/nunomnferreirapt/source-to-docs). Each says what it rebuilds; the originals stayed with the company they were built for.
 
 ## What is left out, and why
 

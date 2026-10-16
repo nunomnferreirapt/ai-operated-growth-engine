@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="260" viewBox="0 0 960 260" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <style>
+    .box { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.5; rx: 8; }
+    .lbl { font-size: 13px; fill: #1f2328; }
+    .sub { font-size: 11px; fill: #57606a; }
+    .gate { fill: #1f2328; }
+    .gatetext { font-size: 13px; fill: #ffffff; font-weight: 600; }
+    .note { font-size: 12px; fill: #57606a; }
+    .pulse { fill: #0969da; }
+    .flow { stroke: #8c959f; stroke-width: 1.5; fill: none; }
+  </style>
+  <text x="24" y="30" class="lbl" font-weight="600">The weekly chain: each stage runs only if the one before it did, and the chain never publishes.</text>
+  <g id="stages">
+    <rect class="box" x="24" y="60" width="112" height="56"/><text class="lbl" x="34" y="84">1 Index</text><text class="sub" x="34" y="102">crawl the sources</text>
+    <rect class="box" x="152" y="60" width="112" height="56"/><text class="lbl" x="162" y="84">2 Chatbot</text><text class="sub" x="162" y="102">drift report</text>
+    <rect class="box" x="280" y="60" width="112" height="56"/><text class="lbl" x="290" y="84">3 Playbook</text><text class="sub" x="290" y="102">check vs sources</text>
+    <rect class="box" x="408" y="60" width="112" height="56"/><text class="lbl" x="418" y="84">4 Docs</text><text class="sub" x="418" y="102">gaps to PRs</text>
+    <rect class="box" x="536" y="60" width="112" height="56"/><text class="lbl" x="546" y="84">5 Fact-check</text><text class="sub" x="546" y="102">claims vs vault</text>
+    <rect class="box" x="664" y="60" width="112" height="56"/><text class="lbl" x="674" y="84">6 Reviews</text><text class="sub" x="674" y="102">replies drafted</text>
+    <rect class="box" x="792" y="60" width="144" height="56"/><text class="lbl" x="802" y="84">7 Register</text><text class="sub" x="802" y="102">human gaps re-checked</text>
+  </g>
+  <path class="flow" d="M136 88 H152 M264 88 H280 M392 88 H408 M520 88 H536 M648 88 H664 M776 88 H792"/>
+  <circle class="pulse" r="6" cy="88">
+    <animate attributeName="cx" values="30;130;130;258;258;386;386;514;514;642;642;770;770;930;930" keyTimes="0;0.1;0.14;0.24;0.28;0.38;0.42;0.52;0.56;0.66;0.7;0.8;0.84;0.96;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <path class="flow" d="M864 116 V150 H480 V180" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#8c959f"/></marker></defs>
+  <rect class="gate" x="300" y="180" width="360" height="44" rx="8"/>
+  <text class="gatetext" x="480" y="207" text-anchor="middle">Proposal or pull request. A person approves.</text>
+  <circle class="pulse" r="6" cx="480" cy="180" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.84;0.86;0.98;1" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="150;150;150;224;224" keyTimes="0;0.84;0.86;0.98;1" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  <text class="note" x="480" y="248" text-anchor="middle">Nothing posts, merges or sends on its own. The system stops here.</text>
+</svg>
