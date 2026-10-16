@@ -24,37 +24,34 @@ Of the list above, the pricing, the product decisions and the team were decided 
 ```mermaid
 flowchart TB
     subgraph L1["1 · Knowledge substrate"]
-        S["`Website, product docs, support KB, marketplace listing
-crawled weekly`"] --> V[("`Git-tracked knowledge vault
-one folder, every source`")]
+        S["Website, product docs, support KB, marketplace listing: crawled weekly"] --> V[("Git-tracked knowledge vault, one folder, every source")]
     end
-    subgraph L2["2 · Skills (~20 production agents)"]
-        V --> A["`Campaigns and content
-ads, emails, articles`"]
-        V --> D["`Docs and chatbot
-gap lists, knowledge base edits`"]
-        V --> E["`Sales enablement
-the playbook`"]
-        V --> R["`Reporting
-the monthly numbers`"]
+    subgraph L2["2 · Skills, about 20 production agents"]
+        direction LR
+        A["Campaigns and content: ads, emails, articles"]
+        D["Docs and chatbot: gap lists, knowledge base edits"]
+        E["Sales enablement: the playbook"]
+        R["Reporting: the monthly numbers"]
     end
+    V --> L2
     subgraph L3["3 · Two rhythms"]
-        D --> CH["`Weekly chain, on its own
-index, chatbot drift, playbook, docs drift,
-fact-check, reviews watch, register re-verify`"]
-        E --> CH
-        A --> OD["`On demand and monthly
-started by a person`"]
-        R --> OD
+        direction LR
+        subgraph CH["Weekly chain, on its own"]
+            direction LR
+            s1["index"] --> s2["chatbot drift"] --> s3["playbook"] --> s4["docs drift"] --> s5["fact-check"] --> s6["reviews watch"] --> s7["register re-verify"]
+        end
+        OD["On demand and monthly, started by a person"]
     end
+    D --> CH
+    E --> CH
+    A --> OD
+    R --> OD
     subgraph L4["4 · Human gate"]
-        CH --> P["`Proposal packets and PRs
-the system stops here`"]
-        OD --> P
-        P --> H{"A person approves"}
+        P["Proposal packets and pull requests: the system stops here"] --> H{"A person approves"}
     end
-    H --> OUT["`Ads, emails, articles, docs sites, chatbot KB,
-sales playbook, monthly reporting`"]
+    CH --> P
+    OD --> P
+    H --> OUT["Ads, emails, articles, docs sites, chatbot KB, sales playbook, monthly reporting"]
     OUT -.->|next crawl re-reads reality| S
 ```
 

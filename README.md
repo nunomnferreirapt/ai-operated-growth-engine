@@ -15,25 +15,17 @@ flowchart TB
         V[("Knowledge vault")] --> SK["~20 skills"] --> L["Weekly loops"] --> G{{"Human gate"}}
     end
     subgraph MO["The motion"]
-        direction LR
-        C0["`0 · One product,
-trial first, online checkout`"]
+        C0["0 · One product, trial first, online checkout"]
     end
     subgraph MA["The machine"]
         direction LR
-        C2["`2 · Paid media
-ad, form, sequence, a person`"] --> C1["`1 · CRM
-lead, MQL, SQL, deal`"]
-        C3["`3 · Chatbot
-versioned knowledge base`"] --> C1
-        C4["`4 · Docs, three sites
-docs as code`"]
+        C2["2 · Paid media that ends in a person"] --> C1["1 · CRM, from lead to deal"]
+        C3["3 · Chatbot with a versioned brain"] --> C1
+        C4["4 · Docs as code, three sites"]
     end
     subgraph ST["Steering the business"]
         direction LR
-        C5["`5 · Numbers machine
-monthly reporting`"] --> C6["`6 · Financial model
-the leadership team could click`"]
+        C5["5 · Numbers machine, monthly"] --> C6["6 · Financial model the board could click"]
     end
     MO --> MA --> ST
     OS -. drafts and proposals .-> MA
