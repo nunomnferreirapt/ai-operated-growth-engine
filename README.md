@@ -73,8 +73,6 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 ## What is left out, and why
 
 - Customer names, pricing logic, partner terms, and every absolute figure: sales, revenue base, pipeline, costs, customer and seat totals. Confidentiality toward the former employer holds. The figures that do appear are relative ones (shares, growth rates, ratios and funnel counts), already published on LinkedIn.
-- Files that could not be scrubbed cleanly are rewritten as representative examples and say so. Nothing here is reconstructed to look like a leak.
-- What broke stays in. One guardrail was added after a real failure: a knowledge base shrunk by a bad crawl. One failure stays in as told: an agent that reported an action it had not taken. The case studies tell both stories.
 
 ## Who built this
 
