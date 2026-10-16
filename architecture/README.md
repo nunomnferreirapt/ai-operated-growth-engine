@@ -11,4 +11,3 @@ One note per mechanism, short, written from the chapters. Each: what it does, wh
 | [`patterns/manifest-driven-incremental.md`](patterns/manifest-driven-incremental.md) | A hash per source decides whether anything runs |
 | [`patterns/drift-watch.md`](patterns/drift-watch.md) | Read-only comparison of a surface with its sources |
 
-Coming: sanitized excerpts of a skill definition, the orchestrator config shape and the PR-gate workflow.

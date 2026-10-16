@@ -26,4 +26,4 @@ Two closed deals in four months, one of them logged in the CRM under the name "C
 
 ## What broke
 
-Once, a customer said they wanted to buy, the bot said it had passed the request to sales, and nothing had been sent. The customer waited and then escalated by email. The deal still closed. The lesson became a rule for the handover: verify that every action the bot reports actually ran, and send a failed check to a person.
+Once, a customer said they wanted to buy, the bot said it had passed the request to sales, and nothing had been sent. The customer waited and then escalated by email. The deal still closed. What made failures like that cheap to fix: the bot's brain lives in GitHub and sits in the weekly loops, so a correction went from pull request to production in days, not in a vendor ticket.

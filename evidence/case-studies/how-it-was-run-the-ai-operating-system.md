@@ -6,7 +6,7 @@
 
 GeoDin is Fugro's geotechnical data management software. It's been around for thirty years, mostly as a German desktop product sold on perpetual licenses. My job over the past three years was to turn it into a recurring-revenue business, and that meant building most of the business around the product from scratch:
 
-- The offering and the pricing: dozens of legacy products consolidated into one product with three variants, priced per device and per country.
+- The offering and the pricing: dozens of legacy products consolidated into one product with three variants, priced per user (per device for the field app) and per country.
 - Product decisions and role mapping, and a restructuring of the team so the product could actually be sold and used outside Germany.
 - The growth engine itself: a CRM where there had been none, paid media, a new website, the trial flow, and self-checkout with VAT rules and prices per country.
 - The migration: new pricing and discounts that moved the perpetual-license customers onto subscriptions.
@@ -59,7 +59,7 @@ flowchart TB
 
 ## Did it work?
 
-The business made the shift: subscriptions carry it, the trial is the main way in for new customers, and the numbers are on the front page of this repo. This chapter is about the way of working, so the honest test is a different one: did a small team run a full go-to-market function for two years without the work piling up? It did. The docs, the chatbot and the sales playbook stayed current without anyone updating them by hand, campaigns and content kept going, and the time I had went into the decisions rather than the production.
+The business made the shift: subscriptions carry it, the trial is the main way in for new customers, and the numbers are on the front page of this repo. This chapter is about the way of working, so the honest test is a different one: did a small team run a full go-to-market function through 2026 without the work piling up? It did. The docs, the chatbot and the sales playbook stayed current without anyone updating them by hand, campaigns and content kept going, and the time I had went into the decisions rather than the production.
 
 None of this was a solo act. It sat on the work of the product lead and a small delivery team who modernized the product, the release process and the ways of working in parallel.
 

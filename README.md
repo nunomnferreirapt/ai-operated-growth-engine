@@ -2,7 +2,7 @@
 
 The AI operating system that let a team of one run a full go-to-market function: paid acquisition, content, three documentation sites, a customer-facing chatbot, sales enablement, customer intelligence and monthly reporting. Built and run in production in 2026 for GeoDin, Fugro's geotechnical data management software, on top of a go-to-market rebuilt from 2023, while subscriptions went from 1% of its external sales (2023) to ~90% expected for 2026, and perpetual licensing went to zero.
 
-This repository shows the system as built, sanitized. It is a showcase, not a kit. The case studies explain what ran and why it took this shape, the architecture notes document the patterns, and the artifacts are excerpts of the real files with customer data, pricing and internal addresses removed.
+This repository shows the system as built, sanitized. It is a showcase, not a kit. The case studies explain what ran and why it took this shape, and the architecture notes document the patterns. Customer data, pricing and internal addresses stay out.
 
 ## How it is built
 
@@ -61,7 +61,6 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 - [The weekly loop chain](architecture/loop-chain.md): one chain in dependency order instead of jobs on a timer.
 - [The human gate](architecture/human-gate.md): proposal, pull request, a person merges.
 - Patterns: [fan-out and merge](architecture/patterns/fan-out-merge.md) · [parallel research, one writer](architecture/patterns/research-writer.md) · [manifest-driven incremental runs](architecture/patterns/manifest-driven-incremental.md) · [drift watch](architecture/patterns/drift-watch.md).
-- Coming: sanitized excerpts of a skill definition, the orchestrator config shape and the PR-gate workflow.
 
 **Thesis** (`thesis/`). Two short essays: [what stayed human, and why](thesis/what-stayed-human.md) · [the next 18 months of B2B buying](thesis/next-18-months-of-b2b-buying.md).
 
@@ -71,7 +70,7 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 
 - Customer names, pricing logic, partner terms, and every absolute figure: sales, revenue base, pipeline, costs, customer and seat totals. Confidentiality toward the former employer holds. The figures that do appear are relative ones (shares, growth rates, ratios and funnel counts), already published on LinkedIn.
 - Files that could not be scrubbed cleanly are rewritten as representative examples and say so. Nothing here is reconstructed to look like a leak.
-- What broke stays in. One guardrail was added after a real failure: a knowledge base shrunk by a bad crawl. One failure became a rule for the handover: an agent that reported an action it had not taken. The case studies tell both stories.
+- What broke stays in. One guardrail was added after a real failure: a knowledge base shrunk by a bad crawl. One failure stays in as told: an agent that reported an action it had not taken. The case studies tell both stories.
 
 ## Who built this
 
