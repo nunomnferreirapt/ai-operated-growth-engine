@@ -8,6 +8,26 @@ There was no CRM. Customer history lived in inboxes, spreadsheets and people's h
 
 ## What we built
 
+```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 600}}}%%
+flowchart LR
+    subgraph IN["Triggers, source stamped at first touch"]
+        direction TB
+        T1["Trial request or plug-in download"]
+        T2["LinkedIn lead form, contact form, email"]
+    end
+    IN --> MQL["MQL, by trigger"]
+    MQL --> SQ{"A person decides"}
+    SQ --> SQL["SQL: real company, geotechnical use, a market we sell in"]
+    SQ --> OUT["Campaign target, partner or reseller, disqualified"]
+    SQL --> SEQ["Sequence matched to the segment, Teams tag for who follows up"]
+    SEQ --> DEAL["Deal: technical demo, talks, draft order, closed, or dormant"]
+    SHOP["Shopify order"] -- "one order, one deal, by order number" --> DEAL
+    DEAL --> REP["Three fields drive the reporting: subscription type, market, customer type"]
+    DORM["Dormant after a month: two emails, signed by a person"] -.-> DEAL
+    FL["Edge cases: enrichment, failed joins, odd qualifications, a part-time freelancer"] -.-> DEAL
+```
+
 **HubSpot, from an empty account.** Contacts, companies and deals, with one sales pipeline whose stages matched how deals actually moved: a technical demo, talks, a draft order, closed, or dormant. Three fields on every deal drive everything downstream, including the financial reporting: the subscription type (new, renewal, expansion), the market (German-speaking or not), and the customer type (new, reactivated, migrated).
 
 **One order, one deal.** Every Shopify order has exactly one HubSpot deal, joined by the order number. That single rule is what later let the reporting pipeline classify sales by customer status and region without anyone re-keying anything.
