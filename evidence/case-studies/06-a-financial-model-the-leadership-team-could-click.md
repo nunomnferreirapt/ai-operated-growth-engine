@@ -27,7 +27,7 @@ flowchart TB
     end
     TH --> MD
     subgraph PG["The page, built on Lovable"]
-        AG["`**Claude agent** lovable-expert: the brief, the prompt, the do-not-touch lists`"]:::sys
+        AG["`**Claude agent** lovable-expert turns the request into a Lovable brief: data model, prompts in order, guardrails`"]:::sys
         LV["`**Lovable**, one prompt plus the JSON: parse each formula once, recompute on every drag`"]:::sys
         ST["Brand pass after the math ties: design tokens only"]:::sys
         FX["Surgical fixes: smallest diff, explicit do-not-touch list"]:::sys
@@ -69,7 +69,7 @@ flowchart TB
 
 **Then the page, built in an afternoon.**
 
-- The brief came from a Claude Code agent, `lovable-expert`: spec before prompting, name what changes and what stays, pin a working state before the next change, hand off to code at the complexity wall.
+- The method came from a Claude Code agent, `lovable-expert`, that turns a request into a hand-off-ready Lovable brief: the data model, the prompts in order, the tasks that belong in Claude Code instead, and the guardrails. Its doctrine shaped the build: spec before prompting, plan in chat mode and build in edit mode, name what to change and what to leave alone, pin a working state before the next change, hand off at the complexity wall.
 - Built in Lovable from one prompt and the JSON file, in about two hours. The rule in the prompt: parse each formula once, recompute on every drag, hard-code nothing.
 - A brand pass after the math tied, design tokens only.
 - Fixes as surgical prompts: one section, the smallest change, an explicit do-not-touch list. Kept in the repository next to the model, so the page can be regenerated.
