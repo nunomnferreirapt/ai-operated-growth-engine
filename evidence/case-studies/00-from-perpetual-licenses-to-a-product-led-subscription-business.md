@@ -11,30 +11,37 @@ GeoDin is Fugro's geotechnical data management software. It has been built in Be
 Four moves, roughly in this order.
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600}}}%%
-flowchart LR
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
+flowchart TB
     subgraph B["Before"]
-        direction TB
-        B1["Perpetual license plus maintenance, by quote"]
-        B2["Dozens of modules and bundles on the shop page"]
-        B3["German-speaking markets, no trial, no checkout"]
+        direction LR
+        B1["Perpetual license plus maintenance, by quote"]:::sys
+        B2["Dozens of modules and bundles on the shop page"]:::sys
+        B3["German-speaking markets, no trial, no checkout"]:::sys
     end
     subgraph D["The decisions"]
-        direction TB
-        D1["One product, two variants; no new perpetual licenses"]
-        D2["New terms, prices on the website, a new website"]
-    end
-    subgraph E["Existing customers"]
-        direction TB
-        E1["Segmented by contract type and value"] --> E2["A time-limited offer, by email and letter"] --> E3["Annual subscription"]
-    end
-    subgraph N["New customers"]
-        direction TB
-        N1["Free trial, licensed automatically"] --> N2["Self-checkout, or a person closes"]
+        direction LR
+        D1["One product, two variants, no new perpetual licenses"]:::human
+        D2["New terms, prices on the website, a new website"]:::human
     end
     B --> D
+    subgraph E["Existing customers"]
+        direction LR
+        E1["Segmented by contract type and value"]:::sys --> E2["A time-limited offer, by email and letter"]:::sys --> E3["Annual subscription"]:::out
+    end
+    subgraph N["New customers"]
+        direction LR
+        N1["Free trial, licensed automatically"]:::sys --> N2["Self-checkout, or a person closes"]:::out
+    end
     D --> E
     D --> N
+    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
+    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
+    style B fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style D fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style E fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style N fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
 1. **One offer instead of dozens.** The legacy modules were consolidated into one product with per-user pricing. Later it grew into a suite of three: the desktop database, a field app for tablets, and a plug-in for Civil 3D. Prices went on the website. Seat tiers were built so that adding a seat never makes the bill cheaper, which sounds obvious and is not how most volume schedules behave.

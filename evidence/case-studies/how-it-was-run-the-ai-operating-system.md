@@ -22,35 +22,43 @@ So the work became: build an operating system of AI agents that does the repeata
 Of the list above, the pricing, the product decisions and the team were decided by people and stayed that way (more under "What stayed human"). Everything else had repeatable work in it, and that is what the operating system was built to run. Five parts:
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600}}}%%
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
 flowchart TB
     subgraph L1["1 · Knowledge substrate"]
-        S["Website, product docs, support KB, marketplace listing: crawled weekly"] --> V[("Git-tracked knowledge vault, one folder, every source")]
+        direction LR
+        S["Website, docs, support KB, marketplace: crawled weekly"]:::sys --> V[("Git-tracked knowledge vault")]:::sys
     end
     subgraph L2["2 · Skills, about 20 production agents"]
         direction LR
-        A["Campaigns and content: ads, emails, articles"]
-        D["Docs and chatbot: gap lists, knowledge base edits"]
-        E["Sales enablement: the playbook"]
-        R["Reporting: the monthly numbers"]
+        A["Campaigns and content"]:::sys
+        D["Docs and chatbot"]:::sys
+        E["Sales enablement"]:::sys
+        R["Reporting"]:::sys
     end
-    V --> L2
+    L1 --> L2
     subgraph L3["3 · Two rhythms"]
-        direction LR
-        CH["Weekly chain, on its own: index, chatbot drift, playbook, docs drift, fact-check, reviews watch, register re-verify"]
-        OD["On demand and monthly, started by a person"]
+        CHa["Weekly chain, on its own: index, chatbot drift, playbook"]:::sys --> CHb["then docs drift, fact-check, reviews watch, register re-verify"]:::sys
+        OD["On demand and monthly, started by a person"]:::sys
     end
-    D --> CH
-    E --> CH
+    D --> CHa
+    E --> CHa
     A --> OD
     R --> OD
     subgraph L4["4 · Human gate"]
-        P["Proposal packets and pull requests: the system stops here"] --> H{"A person approves"}
+        direction LR
+        P["Proposal packets and pull requests"]:::sys --> H{"A person approves"}:::human
     end
-    CH --> P
+    CHb --> P
     OD --> P
-    H --> OUT["Ads, emails, articles, docs sites, chatbot KB, sales playbook, monthly reporting"]
+    H --> OUT["Ads, emails, articles, docs, chatbot KB, playbook, reporting"]:::out
     OUT -.->|next crawl re-reads reality| S
+    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
+    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
+    style L1 fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style L2 fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style L3 fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style L4 fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
 **1. One source of truth.** Everything the product says about itself in public (website, documentation, support articles, marketplace listing) is crawled weekly into one folder under git. One rule: generated text is never a source. The agents cannot quote our own marketing copy back at us.

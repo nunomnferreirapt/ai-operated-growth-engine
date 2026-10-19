@@ -9,23 +9,25 @@ There was no CRM. Customer history lived in inboxes, spreadsheets and people's h
 ## What we built
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600}}}%%
-flowchart LR
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
+flowchart TB
     subgraph IN["Triggers, source stamped at first touch"]
-        direction TB
-        T1["Trial request or plug-in download"]
-        T2["LinkedIn lead form, contact form, email"]
+        direction LR
+        T1["Trial request or plug-in download"]:::sys
+        T2["LinkedIn lead form, contact form, email"]:::sys
     end
-    IN --> MQL["MQL, by trigger"]
-    MQL --> SQ{"A person decides"}
-    SQ --> SQL["SQL: real company, geotechnical use, a market we sell in"]
-    SQ --> OUT["Campaign target, partner or reseller, disqualified"]
-    SQL --> SEQ["Sequence matched to the segment, Teams tag for who follows up"]
-    SEQ --> DEAL["Deal: technical demo, talks, draft order, closed, or dormant"]
-    SHOP["Shopify order"] -- "one order, one deal, by order number" --> DEAL
-    DEAL --> REP["Three fields drive the reporting: subscription type, market, customer type"]
-    DORM["Dormant after a month: two emails, signed by a person"] -.-> DEAL
-    FL["Edge cases: enrichment, failed joins, odd qualifications, a part-time freelancer"] -.-> DEAL
+    IN --> MQL["MQL, by trigger"]:::sys
+    MQL --> SQ{"A person decides"}:::human
+    SQ --> SQL["SQL: real company, geotechnical use, our market"]:::sys
+    SQ --> OUT["Campaign target, partner, or disqualified"]:::sys
+    SQL --> SEQ["Sequence by segment, Teams tag for who follows up"]:::sys
+    SEQ --> DEAL["Deal: demo, talks, draft order, closed, dormant"]:::sys
+    DEAL --> SHOP["Shopify order, joined to its deal by order number"]:::sys
+    SHOP --> REP["Three fields feed the reporting"]:::out
+    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
+    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
+    style IN fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
 **HubSpot, from an empty account.** Contacts, companies and deals, with one sales pipeline whose stages matched how deals actually moved: a technical demo, talks, a draft order, closed, or dormant. Three fields on every deal drive everything downstream, including the financial reporting: the subscription type (new, renewal, expansion), the market (German-speaking or not), and the customer type (new, reactivated, migrated).

@@ -9,28 +9,35 @@ This repository shows the system as built, sanitized. It is a showcase, not a ki
 One box per chapter; the numbers match the Read section below. Each chapter carries its own diagram of that part.
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600}}}%%
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
 flowchart TB
     subgraph OS["The AI operating system, how it was run"]
         direction LR
-        V[("Knowledge vault")] --> SK["~20 skills"] --> L["Weekly loops"] --> G{{"Human gate"}}
+        V[("Knowledge vault")]:::sys --> SK["About 20 skills"]:::sys --> L["Weekly loops"]:::sys --> G{{"Human gate"}}:::human
     end
     subgraph MO["The motion"]
-        C0["0 · One product, trial first, online checkout"]
+        C0["0 · One product, trial first, online checkout"]:::sys
     end
     subgraph MA["The machine"]
         direction LR
-        C2["2 · Paid media that ends in a person"] --> C1["1 · CRM, from lead to deal"]
-        C3["3 · Chatbot with a versioned brain"] --> C1
-        C4["4 · Docs as code, three sites"]
+        C2["2 · Paid media that ends in a person"]:::sys --> C1["1 · CRM, from lead to deal"]:::sys
+        C3["3 · Chatbot with a versioned brain"]:::sys --> C1
+        C4["4 · Docs as code, three sites"]:::sys
     end
     subgraph ST["Steering the business"]
         direction LR
-        C5["5 · Numbers machine, monthly"] --> C6["6 · Financial model the board could click"]
+        C5["5 · Numbers machine, monthly"]:::out --> C6["6 · Financial model the board could click"]:::out
     end
     MO --> MA --> ST
     OS -. drafts and proposals .-> MA
     OS -. the monthly numbers .-> ST
+    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
+    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
+    style OS fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style MO fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style MA fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style ST fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
 The working rule: the system detects and drafts, a person approves. No loop posts, merges or publishes on its own. A loop ends in a proposal, an accepted proposal becomes a pull request, and a person merges it, often Nuno. Every change sits in a history anyone in the team can read.
