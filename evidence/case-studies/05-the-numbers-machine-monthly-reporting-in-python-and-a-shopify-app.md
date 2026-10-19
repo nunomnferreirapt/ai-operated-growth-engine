@@ -44,84 +44,17 @@ flowchart TB
 - Clean: a rules engine classifies every line into the clean tables: subscriptions, services, trials, monthly revenue, credit notes, cancellations, defaults, churn events, subscription chains. Plus a file of lines a person must look at.
 - Report: an Excel workbook with the data tabs, the monthly metrics, the renewal chains and the subscription base.
 
-```
-Shopify Admin API
-        │
-        ▼
-Layer 1: scripts/shopify_pull.py     → outputs/<pull>/orders.csv
-                                        outputs/<pull>/transactions.csv
-        │
-        ▼
-Layer 2: scripts/clean_transactions.py  → outputs/<pull>/clean_subscriptions.csv
-                                          outputs/<pull>/clean_services.csv
-                                          outputs/<pull>/trials.csv
-                                          outputs/<pull>/revenue_monthly.csv
-                                          outputs/<pull>/credit_notes.csv
-                                          outputs/<pull>/churn_events.csv
-                                          outputs/<pull>/manual_review.csv
-                                          outputs/<pull>/summary.json
-        │
-        ▼
-Layer 2b: scripts/parse_legacy_orders.py → outputs/<pull>/legacy_*.csv
-                                           (pre-Shopify data from Excel; anchors
-                                            renewal-chain Year 0)
-        │
-        ▼
-Layer 3: scripts/generate_workbook.py  → outputs/<pull>/financial-report.xlsx
-                                          (data tabs, monthly metrics, renewal
-                                           chains, Subscription Base tab, charts)
-```
+![The pipeline, three layers, script by script](../../assets/chapter-5/pipeline-three-layers.png)
 
-<details>
-<summary>The repository layout, from its README</summary>
+*The three layers as the repo's README draws them: pull, clean, the legacy layer that anchors year zero, and the workbook.*
 
-```
-geodin-financial-reporting/
-├── README.md                  ← this file
-├── CLAUDE.md                  AI/session orientation (read-first map, common commands)
-├── docs/
-│   ├── project-progress.md                 running scope + progress log ("Revamp" log) — start here
-│   ├── data-model.md                       canonical clean-transaction schema
-│   ├── rules.md                            transformation + recognition methodology
-│   ├── cleaning-rules-checklist.md         implementation contract (rules.md → code)
-│   └── methodology-summary-for-fugro.md    Fugro-shareable business doc
-├── scripts/
-│   ├── shopify_oauth_setup.py              one-time OAuth setup (already used)
-│   ├── shopify_pull.py                     Layer 1 — monthly / targeted / incremental extraction
-│   ├── merge_targeted_into_pull.py         upsert an incremental pull into the main pull
-│   ├── clean_transactions.py               Layer 2 — rules engine
-│   ├── parse_legacy_orders.py              Layer 2b — pre-Shopify legacy orders (needs venv)
-│   ├── build_renewal_chain.py              renewal-chain construction helpers
-│   ├── generate_workbook.py                Layer 3 — Excel workbook (needs venv/openpyxl)
-│   ├── generate_snapshot.py                strategic snapshot → insights/deliverables/
-│   ├── reconcile_renewals.py               monthly renewals reconciliation
-│   ├── enhance_renewals_workbook.py        formatting/enrichment for renewals workbook
-│   └── refresh.sh                          re-clean + rebuild workbook for latest pull
-├── lookups/
-│   ├── README.md                           explains user-maintained inputs
-│   ├── dach_countries.csv                  DE/AT/CH (small, committed)
-│   └── (sku_map.csv, HubSpot CRM exports, discounts, legacy sales DB,
-│      off-Shopify refunds, upcoming-renewals xlsx — gitignored, user-maintained)
-├── insights/                               strategy & board layer — gitignored except README + CHANGELOG
-│   ├── README.md                           layout + source-of-truth convention (bets.json is the bible)
-│   ├── CHANGELOG.md                        data-free log of deliverable refreshes
-│   ├── deliverables/                       snapshot, forecast inputs, board prep, pricing… (local only)
-│   ├── model/                              board forecast engine: bets.json + reconcile.js + trace_bet.js
-│   ├── lovable/                            prompts/assets to regenerate the Lovable board page
-│   └── process/                            how-we-build notes
-├── renewals/                               monthly renewals workspace — fully gitignored (real data)
-├── workbook/                               only an empty template may be committed
-├── outputs/                                gitignored — real data, one folder per pull
-├── .claude/
-│   ├── agents/geodin-board-forecast.md     project subagent: board-forecast domain expert
-│   ├── settings.json                       shared Claude Code settings (committed)
-│   ├── settings.local.json                 personal overrides (gitignored)
-│   └── worktrees/                          scratch area for Claude Code git worktrees (empty when idle)
-├── .githooks/pre-commit                    reminder hook: log bets.json changes in insights/CHANGELOG.md
-└── .gitignore
-```
+![The repository layout](../../assets/chapter-5/repository-layout.png)
 
-</details>
+*The repository: rules and data model written as documents, scripts per layer, the lookups a person maintains, the board layer, and real data kept out of git.*
+
+![Every report cut falls out of the clean tables as a pivot](../../assets/chapter-5/data-model-every-cut-a-pivot.png)
+
+*From the data-model note: every report cut, the monthly report, per-product splits, seats, churn, trial conversion, the renewal forecast, falls out of the clean tables as a pivot. No additional tables, one truth.*
 
 **The rules, written down before the code.**
 
