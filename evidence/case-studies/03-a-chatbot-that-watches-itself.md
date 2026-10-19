@@ -45,7 +45,7 @@ flowchart TB
 
 *The brain as tools: an MCP server inside n8n exposes each file of the knowledge repo to the agent, one tool per file, read from GitHub. This is why merging a pull request is deploying.*
 
-**The knowledge base as a git repository.** The bot answers from a set of markdown files, versioned in a repo, changed only through pull requests. That repo was also the contract between the two freelancers: the conversation flows reference the files by name. Built in English, the bot replies in the visitor's language.
+**The knowledge base as a git repository.** The bot answers from a set of markdown files, versioned in a repo, changed only through pull requests. It runs on Claude Haiku, the small fast model; the knowledge does the work, not the model. That repo was also the contract between the two freelancers: the conversation flows reference the files by name. Built in English, the bot replies in the visitor's language.
 
 ![The brain repo's index, part 1: what the bot knows](../../assets/chapter-3/brain-index-knowledge.png)
 
@@ -57,7 +57,9 @@ flowchart TB
 
 **A weekly drift watch.** Every week a read-only job compares the knowledge base with what the website, the docs and the support articles currently say, and writes up the differences. A person runs the refresh on that packet, reviews the proposed edits and opens the pull request; another read, then the merge. Merging is deploying, because the bot reads main. The bot never updates itself.
 
-**Guardrails as files.** The rules for what the bot may and may not do are in the same repo and are only ever changed by hand. Real visitors tried the usual things: fake urgency, persona overrides, "which tools are you using". The rules held.
+**Guardrails as files.** The rules for what the bot may and may not do are in the same repo and are only ever changed by hand; the agent's own prompt, which repeats the key ones, lived in the workflow with the n8n freelancer. Real visitors tried the usual things: fake urgency, persona overrides, "which tools are you using". The rules held.
+
+**Every conversation archived.** The workflow saved each transcript to a shared drive and logged it. In August the whole corpus went through one analysis: internal tests separated from real traffic, and the real conversations split into support, purchase intent and competitive questions. That is where the two deals, the failure below and the guardrail attempts were found.
 
 ## What stayed human
 
@@ -65,8 +67,8 @@ Every change to what the bot knows or how it behaves. The handoff of anyone who 
 
 ## What it did
 
-Two closed deals in four months, one of them logged in the CRM under the name "Chatbot" by whoever created it. Customers started treating the bot as the front door for licensing questions, including returning ones.
+Two closed deals in four months, one of them logged in the CRM under the name "Chatbot" by whoever created it; together they repaid the build cost more than twice over. Most real conversations were in German, from existing customers with licensing questions, and customers started treating the bot as the front door, including returning ones. Troubleshooting questions were pointed to the docs portal, which has its own off-the-shelf GitBook assistant answering from the documentation itself (see [chapter 4](04-docs-as-code-three-sites.md)).
 
 ## What broke
 
-Once, a customer said they wanted to buy, the bot said it had passed the request to sales, and nothing had been sent. The customer waited and then escalated by email. The deal still closed. What made failures like that cheap to fix: the bot's brain lives in GitHub and sits in the weekly loops, so a correction went from pull request to production in days, not in a vendor ticket.
+Once, a customer said they wanted to buy, the bot said it had passed the request to sales, and nothing had been sent. The customer waited and then escalated by email. The deal still closed. Two fixes followed: the handoff rule in the agent's prompt was hardened to force the tool call, and a pricing contradiction found in the same conversation was corrected in the brain through a pull request. The real lesson, verify that an action happened instead of trusting the agent's claim that it did, went into the handover as the top item rather than being built.
