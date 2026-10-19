@@ -16,32 +16,38 @@ flowchart TB
         B2(["Assumptions per bet, argued in writing: what it is, why it holds"]):::human
         B3(["A range per assumption: conservative, estimated, ambitious"]):::human
         B4(["The scenario rule: which bets count in which scenario"]):::human
+        B1 ~~~ B2 ~~~ B3 ~~~ B4
     end
     subgraph MD["The model, one JSON file"]
         J["`**Claude Code** built it: each bet a formula, dials in, euros out`"]:::sys
         PR["Every dial with its three presets; 2026 pinned to actuals, chapter 5"]:::sys
         RC["Reconcile script: recompute every bet, diff, tie totals to the narrative"]:::sys
         TR["Trace script: sweep one slider, eyeball the curve between presets"]:::sys
+        J ~~~ PR ~~~ RC ~~~ TR
     end
     TH --> MD
     subgraph PG["The page, built on Lovable"]
         LV["`**Lovable**, one prompt plus the JSON: parse each formula once, recompute on every drag`"]:::sys
         ST["Brand pass after the math ties: design tokens only"]:::sys
         FX["Surgical fixes: smallest diff, explicit do-not-touch list"]:::sys
+        LV ~~~ ST ~~~ FX
     end
     MD --> PG
-    PG --> O1["Scenario envelope: conservative and ambitious shade the band, the live curve inside"]:::out
-    PG --> O2["A card per bet: pitch, sliders, more dials, its own mini chart"]:::out
-    PG --> O3["Live KPIs, summary table, break-even chart with funding inputs"]:::out
-    O1 --> RM(["Any slider move flips the label to Custom; the room argues the scenario"]):::human
-    O2 --> RM
-    O3 --> RM
+    subgraph OUT["What the board sees"]
+        O1["Scenario envelope: conservative and ambitious shade the band, the live curve inside"]:::out
+        O2["A card per bet: pitch, sliders, more dials, its own mini chart"]:::out
+        O3["Live KPIs, summary table, break-even chart with funding inputs"]:::out
+        O1 ~~~ O2 ~~~ O3
+    end
+    PG --> OUT
+    OUT --> RM(["Any slider move flips the label to Custom; the room argues the scenario"]):::human
     classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
     classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
     classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
     style TH fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
     style MD fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
     style PG fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style OUT fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
 **The thinking first, on paper.**
