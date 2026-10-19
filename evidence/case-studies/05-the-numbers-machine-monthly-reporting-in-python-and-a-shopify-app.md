@@ -69,7 +69,7 @@ flowchart TB
 
 ## What stayed human
 
-The rules. Every one of them was a decision made with finance, and when I proposed a "better" cancellation rule halfway through, the functional owner rejected it in one line: the reference table is what finance recognizes. The rule went in as a memo line outside the totals. The lines flagged for manual review are a person's job, every month.
+The rules. Every one of them is a decision in the rules file, made with finance, not a default the code picked: how a refund, a cancellation or an order edit is booked; when an unmatched or ambiguous line counts as a missing sale rather than noise; what a customer's status and region are when the two systems disagree; how a multi-year prepaid order or a backdated period is recognized; when an unpaid order becomes a loss. The file also says what to do when a rule needs to change. The lines flagged for manual review are a person's job, every month.
 
 ## What it did
 
