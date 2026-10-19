@@ -71,7 +71,7 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 
 *Steering the business*
 - [The numbers machine: monthly reporting in Python and a Shopify app](evidence/case-studies/05-the-numbers-machine-monthly-reporting-in-python-and-a-shopify-app.md). A rules-based reporting engine on git that turned subscription chains, Shopify orders and cohorts into the monthly reporting done with Fugro corporate finance and a five-year projection; the rules themselves, and why a spreadsheet could not hold them.
-- [A financial model the leadership team could click](evidence/case-studies/06-a-financial-model-the-leadership-team-could-click.md). The five-year model rebuilt as a Lovable app for the investment-committee presentations to Fugro's CEO and CFO: scenarios, levers, one screen per decision, instead of a spreadsheet passed around by email.
+- [A financial model the leadership team could click](evidence/case-studies/06-a-financial-model-the-leadership-team-could-click.md). The five-year model rebuilt as a Lovable app for the investment committee, Fugro's CEO and CFO: scenarios, levers, one screen per decision, instead of a spreadsheet passed around by email.
 
 **Architecture** (`architecture/`). Short notes on the mechanisms, written from the chapters.
 - [The weekly loop chain](architecture/loop-chain.md): one chain in dependency order instead of jobs on a timer.

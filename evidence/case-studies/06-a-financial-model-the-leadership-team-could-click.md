@@ -1,6 +1,6 @@
 # A financial model the leadership team could click
 
-*The five-year model rebuilt as a Lovable app for the investment-committee presentations to Fugro's CEO and CFO: scenarios, levers, one screen per decision, instead of a spreadsheet passed around by email.*
+*The five-year model rebuilt as a Lovable app for the investment committee, Fugro's CEO and CFO: scenarios, levers, one screen per decision, instead of a spreadsheet passed around by email.*
 
 ## Before
 
@@ -90,4 +90,4 @@ The bets themselves, the dials and their presets. The model computes; it does no
 
 ## What it did
 
-The investment-committee presentations to Fugro's CEO and CFO, and the GeoDin board meetings, ran on this page. Each bet carried a proof point, an owner, a cost and a gate date, so the board could decide on evidence. The plan it showed has EBITDA at break-even in 2027.
+The five-year projection presented to the investment committee, Fugro's CEO and CFO, ran on this page. Each bet carried a proof point, an owner, a cost and a gate date, so the committee could decide on evidence. The plan it showed has EBITDA at break-even in 2027.
