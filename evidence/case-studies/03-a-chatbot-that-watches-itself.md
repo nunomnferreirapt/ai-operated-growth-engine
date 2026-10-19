@@ -33,6 +33,22 @@ flowchart TB
 
 **A small expert team instead of an agency.** We wrote the spec and hired two freelancers through Upwork: one on the n8n engineering (the agent workflow, the tools it can call, the CRM hookup), one on the conversation design (intent lanes, qualification, the Miro flows). Weekly design sessions on the n8n canvas. Live on the website in under a month, for about USD 2k.
 
+![The conversation design on Miro, version 0.1](../../assets/chapter-3/miro-conversation-design-overview.png)
+
+*The conversation design on Miro, version 0.1: which channel, the welcome, new lead or existing customer, then one lane per intent: technical, commercial, demo, support, admin, cancellation. In Portuguese, the conversation designer's working language. Comment avatars blurred.*
+
+![One lane in detail: commercial questions](../../assets/chapter-3/miro-conversation-design-lane.png)
+
+*One lane in detail, commercial questions: which brain files n8n consults, the reply with a demo call to action, and the two exits, a lead into HubSpot with an internal email, or a thank-you with a trial link.*
+
+![The n8n workflow as built](../../assets/chapter-3/n8n-workflow.png)
+
+*The n8n workflow as built: the chat webhook in, the agent with its model, memory and tools, the reply back to the chat widget, and the transcript archived and logged. The notes on the canvas, written by the n8n freelancer, explain each node for whoever maintains it next.*
+
+![The brain as tools: an MCP server over the knowledge repo](../../assets/chapter-3/n8n-mcp-brain-as-tools.png)
+
+*The brain as tools: an MCP server inside n8n exposes each file of the knowledge repo to the agent, one tool per file, read from GitHub. This is why merging a pull request is deploying.*
+
 **The knowledge base as a git repository.** The bot answers from a set of markdown files, versioned in a repo, changed only through pull requests. That repo was also the contract between the two freelancers: the conversation flows reference the files by name. Built in English, the bot replies in the visitor's language.
 
 ![The brain repo's index, part 1: what the bot knows](../../assets/chapter-3/brain-index-knowledge.png)
