@@ -4,7 +4,7 @@ Running a go-to-market function through agents forces one question early: what m
 
 **Sending and merging.** Whatever a system drafted (docs changes, chatbot updates, playbook chapters, marketplace replies), a person shipped. Ads and emails went out by hand. Not because the drafts were bad. Because the history matters more than the speed: every change is a pull request someone can open later and read, and that is what made the whole thing possible to hand over.
 
-**Pricing, packaging and partner terms.** The agents brought benchmarks and funnel numbers to the table. The decisions were ours. A price is a position, not a calculation.
+**Pricing, packaging, partner terms, and what to believe about the numbers.** The agents brought benchmarks and funnel numbers to the table. The decisions were ours. A price is a position, not a calculation. The same for the rules that turn orders into revenue, decided with finance, and the five bets and their ranges in the plan. The model computes; it does not decide what to believe.
 
 **Where the budget went.** A monthly look at the campaign numbers, and the calls that followed. The scorecard proposed. A person decided, with inputs the scorecard did not have.
 
