@@ -18,14 +18,14 @@ flowchart TB
     HS --> TT["Teams notification tagging who follows up"]:::sys
     SQ --> P{"A person replies and follows up"}:::human
     TT --> P
+    P --> SC
     subgraph M["Every month"]
         direction LR
         SC["Scorecard: spend, leads, qualified share per campaign"]:::sys --> FA["Fatigue flagged by rule, dead lines flagged"]:::sys
         AJ["Attribution join: LinkedIn numbers to HubSpot deals"]:::sys
     end
-    FA --> B{"A person decides: kill, scale, hold"}:::human
+    FA --> B{"A person decides: kill, scale or hold, per segment"}:::human
     AJ --> B
-    B --> SEG
     classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
     classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
     classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff

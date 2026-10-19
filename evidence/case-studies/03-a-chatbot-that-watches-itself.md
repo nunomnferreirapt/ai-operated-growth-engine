@@ -13,7 +13,7 @@ A contact form and an email address. Prospects with a question waited for office
 flowchart TB
     W["Website, docs and support articles, as published"]:::sys --> DR["Weekly drift watch, read-only: brain against sources"]:::sys
     DR --> PK["Drift packet: what changed, which file it touches"]:::sys
-    PK --> RF{"A person runs the refresh and reviews the edits"}:::human
+    PK --> RF{"A person runs the refresh, reviews the edits"}:::human
     RF --> PR["Pull request against the brain repo"]:::sys
     PR --> MG{"A person merges"}:::human
     subgraph BR["The brain, one git repository"]
