@@ -37,10 +37,6 @@ flowchart TB
 
 *The conversation design on Miro, version 0.1: which channel, the welcome, new lead or existing customer, then one lane per intent: technical, commercial, demo, support, admin, cancellation. In Portuguese, the conversation designer's working language. Comment avatars blurred.*
 
-![One lane in detail: commercial questions](../../assets/chapter-3/miro-conversation-design-lane.png)
-
-*One lane in detail, commercial questions: which brain files n8n consults, the reply with a demo call to action, and the two exits, a lead into HubSpot with an internal email, or a thank-you with a trial link.*
-
 ![The n8n workflow as built](../../assets/chapter-3/n8n-workflow.png)
 
 *The n8n workflow as built: the chat webhook in, the agent with its model, memory and tools, the reply back to the chat widget, and the transcript archived and logged. The notes on the canvas, written by the n8n freelancer, explain each node for whoever maintains it next.*
