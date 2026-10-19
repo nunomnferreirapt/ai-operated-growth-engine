@@ -12,20 +12,21 @@ No paid acquisition. The customer base was German-speaking and had arrived by wo
 %%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
     subgraph M["Every month"]
-        SC["Claude skill: four exports joined, LinkedIn campaigns and creatives, HubSpot leads and deals"]:::box --> FA["Scorecard per campaign, fatigue and dead lines flagged by rule"]:::box
-        SC --> AJ["Attribution: cost per qualified lead, not last touch"]:::box
-        FA --> B(["A person decides per segment: kill, scale or hold"]):::person
+        SC["`**Claude skill:** four exports joined, LinkedIn and HubSpot`"]:::sys --> FA["Scorecard per campaign, fatigue and dead lines flagged by rule"]:::out
+        SC --> AJ["Attribution: cost per qualified lead, not last touch"]:::out
+        FA --> B(["A person decides per segment: kill, scale or hold"]):::human
         AJ --> B
     end
-    B --> SEG["A segment: market, role, the engineer's problem"]:::box
-    SEG --> CR["Claude skill: ad copy and lead form, two variants, in the local language"]:::box
-    CR --> AD["LinkedIn ad with a native lead form"]:::box
-    AD --> HS["Lead in HubSpot, campaign stamped"]:::box
-    HS --> SQ["Sequence matched to the segment, on a schedule"]:::box
-    SQ -- "a qualified lead replies" --> TT["Teams notification tagging who follows up"]:::box
-    TT --> P(["A person replies and takes it from there"]):::person
-    classDef box fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
-    classDef person fill:#1f3a5f,stroke:#e0a95a,color:#ffffff
+    B --> SEG["A segment: market, role, the engineer's problem"]:::sys
+    SEG --> CR["`**Claude skill:** ad copy and lead form, two variants, in the local language`"]:::sys
+    CR --> AD["LinkedIn ad with a native lead form"]:::sys
+    AD --> HS["Lead in HubSpot, campaign stamped"]:::sys
+    HS --> SQ["Sequence matched to the segment, on a schedule"]:::sys
+    SQ -- "a qualified lead replies" --> TT["Teams notification tagging who follows up"]:::sys
+    TT --> P(["A person replies and takes it from there"]):::human
+    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
+    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
     style M fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
