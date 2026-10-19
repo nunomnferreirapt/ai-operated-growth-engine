@@ -2,7 +2,7 @@
 
 Three things were already true for a niche B2B software product by mid-2026, and they will be ordinary by 2028.
 
-**AI assistants refer buyers.** By mid-2026, ChatGPT, Gemini, Claude and Perplexity were sending visitors to the product's website, and some of them became leads. Small in volume, but measurable. The content that earned those referrals was written for that reader: long-form, structured around the questions engineers actually type into an assistant, with claims that can be traced to a source. Answer-engine optimization is a channel; treat it as one while it is still small.
+**AI assistants refer buyers.** By mid-2026, ChatGPT, Gemini, Claude and Perplexity were sending visitors to the product's website, and some of them became leads. Small in volume, but measurable. The content that earned those referrals was written for that reader: long-form, structured around the questions engineers actually type into an assistant, with claims that can be traced to a source. Answer-engine optimization is a channel; treat it as one while it is still small. How the pieces were produced: [chapter 7](../evidence/case-studies/07-articles-that-platforms-chose-to-publish.md).
 
 **Attribution breaks.** The assistant is the first touch and leaves no trace the CRM understands. Paid social fills the top of the funnel and almost never appears as the last touch before a deal. Judging channels by last-touch revenue was already wrong in 2026. The honest measure is qualified leads by channel, read monthly, and a willingness to spend on channels that never close anything on their own.
 

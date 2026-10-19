@@ -13,3 +13,4 @@ The components of the growth engine, one chapter each, written from what ran at 
 | 4 | [Docs as code, three sites](04-docs-as-code-three-sites.md) |
 | 5 | [The numbers machine: monthly reporting in Python and a Shopify app](05-the-numbers-machine-monthly-reporting-in-python-and-a-shopify-app.md) |
 | 6 | [A financial model the leadership team could click](06-a-financial-model-the-leadership-team-could-click.md) |
+| 7 | [Articles that platforms chose to publish](07-articles-that-platforms-chose-to-publish.md) |

@@ -23,6 +23,7 @@ flowchart TB
         C2["2 · Paid media that ends in a person"]:::sys --> C1["1 · CRM, from lead to deal"]:::sys
         C3["3 · Chatbot with a versioned brain"]:::sys --> C1
         C4["4 · Docs as code, three sites"]:::sys
+        C7["7 · Articles that platforms chose to publish"]:::sys --> C1
     end
     subgraph ST["Steering the business"]
         direction LR
@@ -58,7 +59,7 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 
 **Start here.** [How it was run: the AI operating system](evidence/case-studies/how-it-was-run-the-ai-operating-system.md): about 20 production skills, a weekly chain of autonomous loops, a human gate on everything customer-facing. The system that let a team of one run everything below.
 
-**Case studies** (`evidence/case-studies/`). Seven chapters on the parts of the engine.
+**Case studies** (`evidence/case-studies/`). Eight chapters on the parts of the engine.
 
 *The motion*
 - [From perpetual licenses to a product-led subscription business](evidence/case-studies/00-from-perpetual-licenses-to-a-product-led-subscription-business.md). Before: an old website that read as documentation for power users, an offering nobody could parse, no self-checkout. After: one product, three variants, trial first, online checkout, and a subscription base that carries the business.
@@ -67,6 +68,7 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 - [A CRM built from zero, and what stayed manual](evidence/case-studies/01-a-crm-built-from-zero-and-what-stayed-manual.md). The data model, the triggers that make a marketing-qualified lead, the criteria that make a sales-qualified one, the Shopify link, and the freelancer who handled what did not make sense to automate.
 - [Paid media that ends in a human follow-up](evidence/case-studies/02-paid-media-that-ends-in-a-human-follow-up.md). Campaigns customized across 20+ segments, each wired from LinkedIn ad to HubSpot sequence to a Teams notification that tags who follows up; and the monthly budget review that decided where the money went next.
 - [A chatbot that watches itself](evidence/case-studies/03-a-chatbot-that-watches-itself.md). Built with two freelancers for about USD 2k, live in under a month, two closed deals in four months; its knowledge base is a versioned, PR-reviewed repo, and a weekly drift watch proposes the edits.
+- [Articles that platforms chose to publish](evidence/case-studies/07-articles-that-platforms-chose-to-publish.md). A profile per platform, three research agents including one on real assistant-prompt data, one writer, a verification stage, a person who places the piece; by mid-2026 the assistants were referring leads. Rebuilt as two tools anyone can run.
 - [Docs as code, three sites](evidence/case-studies/04-docs-as-code-three-sites.md). From a legacy archive nobody used to self-service docs for new users and deep reference for power users, built from help files, support portal and demo transcripts through a PR-gated pipeline and kept in sync by a drift watch.
 
 *Steering the business*

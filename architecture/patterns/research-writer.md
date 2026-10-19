@@ -16,4 +16,4 @@ Research benefits from several views; prose does not. One writer keeps one voice
 
 ## Where it ran
 
-Long-form articles that independent platforms chose to publish. See [the paid-media chapter](../../evidence/case-studies/02-paid-media-that-ends-in-a-human-follow-up.md) for the surrounding motion and [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline) for the rebuild.
+Long-form articles that independent platforms chose to publish: the story, what it produced and what broke are in [chapter 7](../../evidence/case-studies/07-articles-that-platforms-chose-to-publish.md); the rebuild is [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline).
