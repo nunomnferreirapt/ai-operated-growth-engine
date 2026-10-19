@@ -31,9 +31,17 @@ flowchart TB
     style BR fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
-**A small expert team instead of an agency.** I wrote the spec and hired two freelancers through Upwork: one on the n8n engineering (the agent workflow, the tools it can call, the CRM hookup), one on the conversation design (intent lanes, qualification, the Miro flows). Weekly design sessions on the n8n canvas. Live on the website in under a month, for about USD 2k.
+**A small expert team instead of an agency.** We wrote the spec and hired two freelancers through Upwork: one on the n8n engineering (the agent workflow, the tools it can call, the CRM hookup), one on the conversation design (intent lanes, qualification, the Miro flows). Weekly design sessions on the n8n canvas. Live on the website in under a month, for about USD 2k.
 
 **The knowledge base as a git repository.** The bot answers from a set of markdown files, versioned in a repo, changed only through pull requests. That repo was also the contract between the two freelancers: the conversation flows reference the files by name. Built in English, the bot replies in the visitor's language.
+
+![The brain repo's index, part 1: what the bot knows](../../assets/chapter-3/brain-index-knowledge.png)
+
+*The index of the brain repo, part 1: the knowledge files, one per topic, with what each holds. Customer names blurred.*
+
+![The brain repo's index, part 2: how the bot behaves](../../assets/chapter-3/brain-index-behaviour.png)
+
+*Part 2, the behaviour layer: pricing rules, qualification, guardrails, the handoff protocol, routing links, tone of voice. These files were only ever changed by hand.*
 
 **A weekly drift watch.** Every week a read-only job compares the knowledge base with what the website, the docs and the support articles currently say, and writes up the differences. A person runs the refresh on that packet, reviews the proposed edits and opens the pull request; another read, then the merge. Merging is deploying, because the bot reads main. The bot never updates itself.
 
