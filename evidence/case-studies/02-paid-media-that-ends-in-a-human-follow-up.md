@@ -11,34 +11,35 @@ No paid acquisition. The customer base was German-speaking and had arrived by wo
 ```mermaid
 %%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
 flowchart TB
-    SEG["A segment: market, role, the engineer's problem"]:::sys --> CR["Its own creative and lead magnet, in the local language"]:::sys
-    CR --> AD["LinkedIn ad with a native lead form"]:::sys
+    SEG["A segment: market, role, the engineer's problem"]:::sys --> CR["Ad copy and lead form drafted by a Claude skill, two variants"]:::ai
+    CR --> AD["LinkedIn ad with a native lead form, in the local language"]:::sys
     AD --> HS["Lead in HubSpot, campaign stamped"]:::sys
     HS --> SQ["Sequence matched to the segment, on a schedule"]:::sys
-    HS --> TT["Teams notification tagging who follows up"]:::sys
-    SQ --> P{"A person replies and follows up"}:::human
-    TT --> P
+    SQ -- "a qualified lead replies" --> TT["Teams notification tagging who follows up"]:::sys
+    TT --> P{"A person replies and follows up"}:::human
     P --> SC
-    subgraph M["Every month"]
-        direction LR
-        SC["Scorecard: spend, leads, qualified share per campaign"]:::sys --> FA["Fatigue flagged by rule, dead lines flagged"]:::sys
-        AJ["Attribution join: LinkedIn numbers to HubSpot deals"]:::sys
+    subgraph M["Every month, one Claude skill run"]
+        SC["Four exports joined: LinkedIn campaigns and creatives, HubSpot leads and deals"]:::ai --> FA["Scorecard per campaign, fatigue and dead lines flagged by rule"]:::ai
+        SC --> AJ["Attribution: cost per qualified lead, not last touch"]:::ai
     end
     FA --> B{"A person decides: kill, scale or hold, per segment"}:::human
     AJ --> B
     classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef ai fill:#4a2a6e,stroke:#b58ee6,color:#ffffff
     classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
     classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
     style M fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
-**Segments, not one campaign.** More than 20 segments, cut by market, by role and by the problem the engineer has: migrating off an end-of-life incumbent, logging boreholes in the field, getting ground data into Civil 3D. Each segment got its own creative, its own lead magnet and its own landing. Campaigns ran in the local language, including Brazil and Turkey, where the regulatory context does part of the selling.
+*Navy: the system. Purple: a Claude skill did the work. Amber: a person decides. Green: what came out.*
+
+**Segments, not one campaign.** More than 20 segments, cut by market, by role and by the problem the engineer has: migrating off an end-of-life incumbent, logging boreholes in the field, getting ground data into Civil 3D. Each segment got its own creative, its own lead magnet and its own landing. The ad copy and the lead form came from a Claude skill that read the product and competitor files and the house tone, and returned two variants, one conservative and one with a stronger hook, in the segment's language; a person picked, edited and launched. Campaigns ran in the local language, including Brazil and Turkey, where the regulatory context does part of the selling.
 
 ![LinkedIn Campaign Manager, the segment campaigns side by side](../../assets/chapter-2/linkedin-campaigns-by-segment.png)
 
 *LinkedIn Campaign Manager, one line per segment: Brazil, Turkey, US and Canada, Fugro alumni, Italy, the migration off the incumbent, Europe, DACH, Benelux, and a website-visit line for the Civil 3D download. Figures blurred.*
 
-**Native lead forms into the CRM.** Most leads were captured in LinkedIn's native forms rather than on a landing page, and landed in HubSpot with their campaign stamped. From there: a sequence matched to the segment, and a Teams notification tagging the colleague who follows up. The sequences were semi-automated by design. The emails went out on a schedule; the reply was always a person. Enrolment ran in bulk: the freelancer loaded the leads into a sequence and picked the email signature to match the sequence and the segment, so each segment heard from the right colleague.
+**Native lead forms into the CRM.** Most leads were captured in LinkedIn's native forms rather than on a landing page, and landed in HubSpot with their campaign stamped. From there: a sequence matched to the segment. When a qualified lead replied, a Teams notification tagged the colleague who follows up. The sequences were semi-automated by design. The emails went out on a schedule; the reply was always a person. Enrolment ran in bulk: the freelancer loaded the leads into a sequence and picked the email signature to match the sequence and the segment, so each segment heard from the right colleague.
 
 ![HubSpot sequences, one per segment and trigger](../../assets/chapter-2/hubspot-sequences-by-segment.png)
 
@@ -52,7 +53,7 @@ flowchart TB
 
 *A Fugro alumni email as sent, written as one alum to another and signed by the head of product. The signature was chosen per sequence and segment at enrolment. Recipient blurred.*
 
-**A monthly scorecard.** Spend, leads and the share that qualified, per campaign, in one table. Creative fatigue was flagged by rule when click-through fell or cost per impression rose past a threshold. Lines that had produced nothing for a quarter were cut and the money moved. The scorecard was built once and regenerated every month.
+**A monthly scorecard.** Spend, leads and the share that qualified, per campaign, in one table. The scorecard was a Claude skill: four monthly exports, LinkedIn campaign and creative performance, HubSpot paid-social leads, qualified leads and deals, joined by a script that the skill kept in repair when an export's columns changed. Creative fatigue was flagged by rule when click-through fell or cost per impression rose past a threshold. Lines that had produced nothing for a quarter were cut and the money moved. The skill carried its own state from month to month: the last period reviewed, the open follow-ups, the budget actions still pending.
 
 **The attribution join.** LinkedIn's numbers and HubSpot's deals joined on the contact, which showed that paid social was feeding the top of the funnel rather than closing deals on its own. That changed how campaigns were judged: by qualified leads, not by last-touch revenue.
 
