@@ -8,6 +8,34 @@ Monthly top-line reporting to corporate finance ran on a manually maintained Exc
 
 ## What we built
 
+```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
+flowchart TB
+    subgraph SRC["Sources, pulled every month"]
+        direction LR
+        SH["Shopify Admin API: every order in its current state"]:::sys
+        HS["HubSpot deal, joined by order number: status, market"]:::sys
+        LG["Legacy orders, parsed from spreadsheets"]:::sys
+    end
+    RU(["The rules, decided with finance, written before the code"]):::human --> RE
+    SRC --> RE["Rules engine in Python: classifies every line"]:::sys
+    RE --> CT["Clean tables: subscriptions, services, revenue, churn, chains"]:::out
+    RE --> FL(["Lines a person must look at, every month"]):::human
+    CT --> WB["Excel workbook: data tabs, monthly metrics, subscription base"]:::out
+    WB --> FIN["Monthly reporting with corporate finance"]:::out
+    CT --> PRJ["Five-year projection and strategic snapshot, chapter 6"]:::out
+    subgraph HO["The handover, at exit"]
+        direction LR
+        PS["PowerShell twin, validated line by line against Python"]:::sys --> CC["`**Claude Code** runs it for the finance user, read-only app`"]:::sys
+    end
+    RE -.-> PS
+    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
+    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
+    style SRC fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+    style HO fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+```
+
 **A pipeline, in Python, in a repository.** Three layers. Pull: the Shopify Admin API, which reports every order in its current state after edits and refunds, into raw order and transaction files. Clean: a rules engine that classifies every line and produces the clean tables: subscriptions, services, trials, monthly revenue, credit notes, cancellations, defaults, churn events, subscription chains, and a file of lines a person must look at. Report: an Excel workbook with the data tabs, the monthly metrics, the renewal chains and the subscription base.
 
 **The rules, written down before the code.** Gross sales net of VAT at order date. Revenue on an accrual basis: subscriptions spread over the service period, which can start in a later month than the order, services recognized at each payment. Adjustments treated prospectively: a refund or cancellation is booked as a reversal in the month it happens, and past reports are never restated. Orders unpaid past a threshold written off as a loss. Five VAT scenarios across countries, all handled by trusting the API's net amounts rather than rebuilding tax logic. Each rule has its case in an edge-case log, and the pipeline was validated against every one of them.
