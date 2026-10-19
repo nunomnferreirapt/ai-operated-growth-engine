@@ -9,29 +9,26 @@ No paid acquisition. The customer base was German-speaking and had arrived by wo
 ## What we built
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
-    SEG["A segment: market, role, the engineer's problem"]:::sys --> CR["Ad copy and lead form drafted by a Claude skill, two variants"]:::ai
-    CR --> AD["LinkedIn ad with a native lead form, in the local language"]:::sys
-    AD --> HS["Lead in HubSpot, campaign stamped"]:::sys
-    HS --> SQ["Sequence matched to the segment, on a schedule"]:::sys
-    SQ -- "a qualified lead replies" --> TT["Teams notification tagging who follows up"]:::sys
-    TT --> P{"A person replies and follows up"}:::human
-    P --> SC
-    subgraph M["Every month, one Claude skill run"]
-        SC["Four exports joined: LinkedIn campaigns and creatives, HubSpot leads and deals"]:::ai --> FA["Scorecard per campaign, fatigue and dead lines flagged by rule"]:::ai
-        SC --> AJ["Attribution: cost per qualified lead, not last touch"]:::ai
+    subgraph M["Every month"]
+        SC["Claude skill: four exports joined, LinkedIn campaigns and creatives, HubSpot leads and deals"]:::box --> FA["Scorecard per campaign, fatigue and dead lines flagged by rule"]:::box
+        SC --> AJ["Attribution: cost per qualified lead, not last touch"]:::box
+        FA --> B(["A person decides per segment: kill, scale or hold"]):::person
+        AJ --> B
     end
-    FA --> B{"A person decides: kill, scale or hold, per segment"}:::human
-    AJ --> B
-    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
-    classDef ai fill:#4a2a6e,stroke:#b58ee6,color:#ffffff
-    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
-    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
+    B --> SEG["A segment: market, role, the engineer's problem"]:::box
+    SEG --> CR["Claude skill: ad copy and lead form, two variants, in the local language"]:::box
+    CR --> AD["LinkedIn ad with a native lead form"]:::box
+    AD --> HS["Lead in HubSpot, campaign stamped"]:::box
+    HS --> SQ["Sequence matched to the segment, on a schedule"]:::box
+    SQ -- "a qualified lead replies" --> TT["Teams notification tagging who follows up"]:::box
+    TT --> P(["A person replies and takes it from there"]):::person
+    classDef box fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef person fill:#1f3a5f,stroke:#e0a95a,color:#ffffff
     style M fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
-*Navy: the system. Purple: a Claude skill did the work. Amber: a person decides. Green: what came out.*
 
 **Segments, not one campaign.** More than 20 segments, cut by market, by role and by the problem the engineer has: migrating off an end-of-life incumbent, logging boreholes in the field, getting ground data into Civil 3D. Each segment got its own creative, its own lead magnet and its own landing. The ad copy and the lead form came from a Claude skill that read the product and competitor files and the house tone, and returned two variants, one conservative and one with a stronger hook, in the segment's language; a person picked, edited and launched. Campaigns ran in the local language, including Brazil and Turkey, where the regulatory context does part of the selling.
 
