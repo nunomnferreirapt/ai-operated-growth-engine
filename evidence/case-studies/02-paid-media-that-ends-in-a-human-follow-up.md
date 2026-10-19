@@ -34,7 +34,23 @@ flowchart TB
 
 **Segments, not one campaign.** More than 20 segments, cut by market, by role and by the problem the engineer has: migrating off an end-of-life incumbent, logging boreholes in the field, getting ground data into Civil 3D. Each segment got its own creative, its own lead magnet and its own landing. Campaigns ran in the local language, including Brazil and Turkey, where the regulatory context does part of the selling.
 
-**Native lead forms into the CRM.** Most leads were captured in LinkedIn's native forms rather than on a landing page, and landed in HubSpot with their campaign stamped. From there: a sequence matched to the segment, and a Teams notification tagging the colleague who follows up. The sequences were semi-automated by design. The emails went out on a schedule; the reply was always a person.
+![LinkedIn Campaign Manager, the segment campaigns side by side](../../assets/chapter-2/linkedin-campaigns-by-segment.png)
+
+*LinkedIn Campaign Manager, one line per segment: Brazil, Turkey, US and Canada, Fugro alumni, Italy, the migration off the incumbent, Europe, DACH, Benelux, and a website-visit line for the Civil 3D download. Figures blurred.*
+
+**Native lead forms into the CRM.** Most leads were captured in LinkedIn's native forms rather than on a landing page, and landed in HubSpot with their campaign stamped. From there: a sequence matched to the segment, and a Teams notification tagging the colleague who follows up. The sequences were semi-automated by design. The emails went out on a schedule; the reply was always a person. Enrolment ran in bulk: the freelancer loaded the leads into a sequence and picked the email signature to match the sequence and the segment, so each segment heard from the right colleague.
+
+![HubSpot sequences, one per segment and trigger](../../assets/chapter-2/hubspot-sequences-by-segment.png)
+
+*The sequence list in HubSpot: one per segment and trigger, the owner in brackets. The ones marked dynamic switch from automated emails to manual steps as soon as the lead engages.*
+
+![One sequence: automated email, delay, then a rep-led task](../../assets/chapter-2/hubspot-sequence-automated-then-rep-led.png)
+
+*Inside one sequence: an automated email, a delay of five business days, and the switch to a rep-led task after two opens or one click. The task pauses the automation and lands with the contact owner.*
+
+![A sequence email with the signature chosen for the segment](../../assets/chapter-2/sequence-email-signature-per-segment.png)
+
+*A Fugro alumni email as sent, written as one alum to another and signed by the head of product. The signature was chosen per sequence and segment at enrolment. Recipient blurred.*
 
 **A monthly scorecard.** Spend, leads and the share that qualified, per campaign, in one table. Creative fatigue was flagged by rule when click-through fell or cost per impression rose past a threshold. Lines that had produced nothing for a quarter were cut and the money moved. The scorecard was built once and regenerated every month.
 
@@ -46,4 +62,4 @@ Where the budget went each month, and which campaigns to kill, scale or hold. Th
 
 ## What it did
 
-Paid social became the #2 lead source in a funnel of 6,300 contacts across 60+ countries, 2,900 of them sales-qualified. The campaign markets show up in that funnel as new countries, Brazil and Turkey among them.
+Paid social became the #2 lead source. The campaign markets show up in the funnel as new countries, Brazil and Turkey among them.
