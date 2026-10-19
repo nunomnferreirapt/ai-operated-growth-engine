@@ -9,11 +9,11 @@ This repository shows the system as built, sanitized. It is a showcase, not a ki
 One box per chapter; the numbers match the Read section below. Each chapter carries its own diagram of that part.
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
     subgraph OS["The AI operating system, how it was run"]
         direction LR
-        V[("Knowledge vault")]:::sys --> SK["About 20 skills"]:::sys --> L["Weekly loops"]:::sys --> G{{"Human gate"}}:::human
+        V[("Knowledge vault")]:::sys --> SK["`**Claude skills**, about 20`"]:::sys --> L["Weekly loops"]:::sys --> G(["Human gate"]):::human
     end
     subgraph MO["The motion"]
         C0["0 · One product, trial first, online checkout"]:::sys

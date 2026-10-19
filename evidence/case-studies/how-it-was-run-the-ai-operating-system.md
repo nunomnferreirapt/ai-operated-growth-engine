@@ -22,13 +22,13 @@ So the work became: build an operating system of AI agents that does the repeata
 Of the list above, the pricing, the product decisions and the team were decided by people and stayed that way (more under "What stayed human"). Everything else had repeatable work in it, and that is what the operating system was built to run. Five parts:
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
     subgraph L1["1 · Knowledge substrate"]
         direction LR
         S["Website, docs, support KB, marketplace: crawled weekly"]:::sys --> V[("Git-tracked knowledge vault")]:::sys
     end
-    subgraph L2["2 · Skills, about 20 production agents"]
+    subgraph L2["2 · About 20 Claude skills in production"]
         direction LR
         A["Campaigns and content"]:::sys
         D["Docs and chatbot"]:::sys
@@ -37,8 +37,8 @@ flowchart TB
     end
     L1 --> L2
     subgraph L3["3 · Two rhythms"]
-        CHa["Weekly chain, on its own: index, chatbot drift, playbook"]:::sys --> CHb["then docs drift, fact-check, reviews watch, register re-verify"]:::sys
-        OD["On demand and monthly, started by a person"]:::sys
+        CHa["`**Claude skills**, the weekly chain on its own: index, chatbot drift, playbook`"]:::sys --> CHb["then docs drift, fact-check, reviews watch, register re-verify"]:::sys
+        OD["`**Claude skills** on demand and monthly, started by a person`"]:::sys
     end
     D --> CHa
     E --> CHa
@@ -46,7 +46,7 @@ flowchart TB
     R --> OD
     subgraph L4["4 · Human gate"]
         direction LR
-        P["Proposal packets and pull requests"]:::sys --> H{"A person approves"}:::human
+        P["Proposal packets and pull requests"]:::sys --> H(["A person approves"]):::human
     end
     CHb --> P
     OD --> P

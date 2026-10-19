@@ -9,13 +9,13 @@ A contact form and an email address. Prospects with a question waited for office
 ## What we built
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
-    W["Website, docs and support articles, as published"]:::sys --> DR["Weekly drift watch, read-only: brain against sources"]:::sys
+    W["Website, docs and support articles, as published"]:::sys --> DR["`**Claude skill:** weekly drift watch, read-only, brain against sources`"]:::sys
     DR --> PK["Drift packet: what changed, which file it touches"]:::sys
-    PK --> RF{"A person runs the refresh, reviews the edits"}:::human
+    PK --> RF(["A person runs the refresh, reviews the edits"]):::human
     RF --> PR["Pull request against the brain repo"]:::sys
-    PR --> MG{"A person merges"}:::human
+    PR --> MG(["A person merges"]):::human
     subgraph BR["The brain, one git repository"]
         KB["Knowledge files: pricing, integrations, migration"]:::sys
         GR["Rules for what the bot may do, changed by hand only"]:::sys
@@ -24,7 +24,7 @@ flowchart TB
     KB --> BOT["The bot on the website reads main"]:::out
     GR --> BOT
     BOT --> VIS["Visitor answered in their own language"]:::out
-    BOT --> SALES{"Wants to buy: handed to a person in sales"}:::human
+    BOT --> SALES(["Wants to buy: handed to a person in sales"]):::human
     classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
     classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
     classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff

@@ -11,7 +11,7 @@ GeoDin is Fugro's geotechnical data management software. It has been built in Be
 Four moves, roughly in this order.
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
     subgraph B["Before"]
         direction LR
@@ -21,8 +21,8 @@ flowchart TB
     end
     subgraph D["The decisions"]
         direction LR
-        D1["One product, two variants, no new perpetual licenses"]:::human
-        D2["New terms, prices on the website, a new website"]:::human
+        D1(["One product, two variants, no new perpetual licenses"]):::human
+        D2(["New terms, prices on the website, a new website"]):::human
     end
     B --> D
     subgraph E["Existing customers"]

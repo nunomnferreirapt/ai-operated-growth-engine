@@ -9,7 +9,7 @@ There was no CRM. Customer history lived in inboxes, spreadsheets and people's h
 ## What we built
 
 ```mermaid
-%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
     subgraph IN["Triggers, source stamped at first touch"]
         direction LR
@@ -17,7 +17,7 @@ flowchart TB
         T2["LinkedIn lead form, contact form, email"]:::sys
     end
     IN --> MQL["MQL, by trigger"]:::sys
-    MQL --> SQ{"A person decides"}:::human
+    MQL --> SQ(["A person decides"]):::human
     SQ --> SQL["SQL: real company, geotechnical use, our market"]:::sys
     SQ --> OUT["Campaign target, partner, or disqualified"]:::sys
     SQL --> SEQ["Sequence by segment, Teams tag for who follows up"]:::sys
