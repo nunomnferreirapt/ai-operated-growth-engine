@@ -1,6 +1,6 @@
 # The human gate
 
-No loop posts, merges, sends or publishes on its own. A loop ends in a proposal; if the proposal is accepted, it becomes a pull request; a person merges it, often Nuno.
+No loop posts, merges, sends or publishes on its own. A loop ends in a proposal; if the proposal is accepted, it becomes a pull request; a person merges it.
 
 ## How it worked
 
@@ -14,7 +14,7 @@ The value was the history, more than the approval step: every change to the docs
 
 ## What stayed with people
 
-Pricing, packaging and partner terms. Where the budget went, decided in a monthly look at the campaign numbers. Anything a customer would read as the company's voice; the chatbot's rules were only ever changed by hand.
+Four things, and the reason it was those: [What stayed human, and why](../thesis/what-stayed-human.md).
 
 ## What broke
 

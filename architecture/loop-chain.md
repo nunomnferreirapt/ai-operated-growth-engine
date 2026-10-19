@@ -2,7 +2,24 @@
 
 The skills that had to run every week ran in one chain, in dependency order: index, chatbot drift, playbook, docs drift, fact-check, reviews watch, register re-verify. Seven stages in one chain replaced six jobs that ran at fixed times.
 
-![The weekly chain](../assets/demo/loop-chain.svg)
+```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
+flowchart TB
+    S1["`**Claude skill** 1 · Index: crawl website, docs, support, marketplace into the vault`"]:::sys
+    S2["`**Claude skill** 2 · Chatbot drift: brain against the fresh vault`"]:::sys
+    S3["`**Claude skill** 3 · Playbook: checked against the same vault`"]:::sys
+    S4["`**Claude skill** 4 · Docs drift: sites against their sources`"]:::sys
+    S5["`**Claude skill** 5 · Fact-check: the two master sales documents`"]:::sys
+    S6["`**Claude skill** 6 · Reviews watch: new marketplace reviews, draft replies`"]:::sys
+    S7["`**Claude skill** 7 · Register re-verify: gaps only a person can close`"]:::sys
+    S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7
+    S1 -. "a failed crawl fails everything after it" .-> S7
+    S7 --> OUT["Proposals, drift reports, draft replies, pull requests"]:::out
+    OUT --> P(["A person reads what ran, what failed, what to do"]):::human
+    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
+    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
+```
 
 ## What it does
 
