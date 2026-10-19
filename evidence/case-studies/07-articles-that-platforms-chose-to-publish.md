@@ -34,6 +34,10 @@ flowchart TB
 
 **Research in parallel, three angles.** From the brief, three agents ran at once. A technical researcher read the company's own knowledge: the crawled docs, the demo transcripts, the competitor context. A prompt strategist read exports of real prompts people type into assistants, so the structure of the piece answered the questions engineers actually ask. An industry analyst stayed outside the company's files on purpose and collected third-party data and public project examples that a reader could verify.
 
+![The article writer's architecture, as designed in July 2026](../../assets/chapter-7/article-writer-architecture.png)
+
+*The design note from July 2026: the orchestrator as coordinator, three researchers firing together because they never read each other's sources, one writer fanning them in, and the four agents cut along trust boundaries of information. The technical researcher is the only agent allowed to touch proprietary knowledge; the industry analyst is forbidden from it.*
+
 **One writer, in the platform's voice.** One agent wrote from the three research files and the platform profile, as a geotechnical professional would write for that platform, not as a vendor.
 
 **Verification, then a person.** From July 2026 a verification stage checked every claim in the draft against its source before a person saw it. The person read it, pitched the platform, agreed the byline, and placed the piece. After publication, the prompts the piece was written to answer went into a tracking loop, so the next brief started from what the assistants were already citing.
@@ -45,6 +49,14 @@ Which platform, which topic, which mode. The pitch and the relationship with the
 ## What it did
 
 Eight finished pieces across three platforms. Three bylined articles on the leading independent geotechnical platform, and one on Autodesk's own blog, which also listed the product in its integrations round-up. By mid-2026 the assistants were doing the referring: ChatGPT, Gemini, Claude and Perplexity were sending visitors to the website, and some of them became qualified leads. Small in volume, measurable, and earlier than the market expected it.
+
+Two of the pieces, as published:
+
+| [Life after gINT: rethinking geotechnical data management for a new era](https://www.geoengineer.org/news/life-after-gint-rethinking-geotechnical-data-management-for-a-new-era), geoengineer.org, March 2026, sponsored | [The ground beneath digital transformation: subsurface data is the next frontier](https://www.autodesk.com/blogs/construction/the-ground-beneath-digital-transformation-subsurface-data-is-the-next-frontier/), Autodesk Digital Builder, May 2026 |
+|---|---|
+| [![Life after gINT, on geoengineer.org](../../assets/chapter-7/thumb-geoengineer-life-after-gint.jpg)](https://www.geoengineer.org/news/life-after-gint-rethinking-geotechnical-data-management-for-a-new-era) | [![The ground beneath digital transformation, on Autodesk Digital Builder](../../assets/chapter-7/thumb-autodesk-digital-builder.jpg)](https://www.autodesk.com/blogs/construction/the-ground-beneath-digital-transformation-subsurface-data-is-the-next-frontier/) |
+
+*Entity-building mode on the left, the product named and the piece marked sponsored; authority-building mode on the right, no product link, under a colleague's byline. Thumbnails are page crops that link to the originals.*
 
 ## What broke
 
