@@ -8,11 +8,34 @@ A contact form and an email address. Prospects with a question waited for office
 
 ## What we built
 
+```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 40}}}%%
+flowchart TB
+    W["Website, docs and support articles, as published"]:::sys --> DR["Weekly drift watch, read-only: brain against sources"]:::sys
+    DR --> PK["Drift packet: what changed, which file it touches"]:::sys
+    PK --> RF{"A person runs the refresh and reviews the edits"}:::human
+    RF --> PR["Pull request against the brain repo"]:::sys
+    PR --> MG{"A person merges"}:::human
+    subgraph BR["The brain, one git repository"]
+        KB["Knowledge files: pricing, integrations, migration"]:::sys
+        GR["Rules for what the bot may do, changed by hand only"]:::sys
+    end
+    MG --> KB
+    KB --> BOT["The bot on the website reads main"]:::out
+    GR --> BOT
+    BOT --> VIS["Visitor answered in their own language"]:::out
+    BOT --> SALES{"Wants to buy: handed to a person in sales"}:::human
+    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
+    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
+    style BR fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
+```
+
 **A small expert team instead of an agency.** I wrote the spec and hired two freelancers through Upwork: one on the n8n engineering (the agent workflow, the tools it can call, the CRM hookup), one on the conversation design (intent lanes, qualification, the Miro flows). Weekly design sessions on the n8n canvas. Live on the website in under a month, for about USD 2k.
 
 **The knowledge base as a git repository.** The bot answers from a set of markdown files, versioned in a repo, changed only through pull requests. That repo was also the contract between the two freelancers: the conversation flows reference the files by name. Built in English, the bot replies in the visitor's language.
 
-**A weekly drift watch.** Every week a read-only job compares the knowledge base with what the website, the docs and the support articles currently say, and proposes the edits as a pull request. A person reads and merges. The bot never updates itself.
+**A weekly drift watch.** Every week a read-only job compares the knowledge base with what the website, the docs and the support articles currently say, and writes up the differences. A person runs the refresh on that packet, reviews the proposed edits and opens the pull request; another read, then the merge. Merging is deploying, because the bot reads main. The bot never updates itself.
 
 **Guardrails as files.** The rules for what the bot may and may not do are in the same repo and are only ever changed by hand. Real visitors tried the usual things: fake urgency, persona overrides, "which tools are you using". The rules held.
 
