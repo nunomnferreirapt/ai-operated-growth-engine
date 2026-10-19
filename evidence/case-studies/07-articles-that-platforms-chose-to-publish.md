@@ -48,7 +48,7 @@ Which platform, which topic, which mode. The pitch and the relationship with the
 
 ## What it did
 
-Eight finished pieces across three platforms. Three bylined articles on the leading independent geotechnical platform, and one on Autodesk's own blog, which also listed the product in its integrations round-up. By mid-2026 the assistants were doing the referring: ChatGPT, Gemini, Claude and Perplexity were sending visitors to the website, and some of them became qualified leads. Small in volume, measurable, and earlier than the market expected it.
+Eight finished pieces across three platforms. Three bylined articles on geoengineer.org, the leading independent geotechnical platform, and one on Autodesk's own blog, which also listed the product in its integrations round-up. By mid-2026 the assistants were doing the referring: ChatGPT, Gemini, Claude and Perplexity were sending visitors to the website, and some of them became qualified leads. Small in volume, measurable, and earlier than the market expected it.
 
 Two of the pieces, as published:
 
