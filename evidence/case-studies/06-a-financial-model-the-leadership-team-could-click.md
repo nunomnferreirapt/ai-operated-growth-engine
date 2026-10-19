@@ -8,6 +8,22 @@ The five-year plan was a spreadsheet. Every investment-committee meeting re-deri
 
 ## What we built
 
+```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
+flowchart TB
+    BASE["The clean base and the snapshot, chapter 5: 2026 actuals, pinned"]:::sys --> JSON
+    BETS(["Five bets, their dials and three presets: decided by people"]):::human --> JSON["One JSON file: each bet a small formula with named dials"]:::sys
+    JSON --> REC["Reconcile script: recomputes every bet, ties totals to the narrative"]:::sys
+    JSON --> LOV["`**Lovable** builds the page from one prompt and the JSON file`"]:::sys
+    FIX["Fixes as surgical prompts, kept in the repo next to the model"]:::sys --> LOV
+    LOV --> PAGE["One page: scenario chips, sliders for 2027 to 2030, per-bet toggles, live KPIs"]:::out
+    PAGE --> BE["Second chart: when it stops needing internal funding"]:::out
+    PAGE --> ROOM(["The investment committee moves the dials; the scenario is argued, not calculated"]):::human
+    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
+    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
+    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
+```
+
 **The model as a file, not a sheet.** Five bets, each a small formula with named dials, in one JSON file. Every dial has a preset for three scenarios: conservative, estimated and ambitious. 2026 is pinned to actuals and never moves; the sliders only move 2027 to 2030. A reconcile script recomputes every bet from its formula and ties the headline totals to the written narrative, so the model cannot quietly drift from the document that explains it.
 
 **A page the board can touch.** Built in Lovable from one prompt and the JSON file, designed to ship in about two hours. One chart, with the headline as stacked bands per bet. Scenario chips that set every dial; the moment someone moves a slider, the chip says "Custom". Per-bet toggles that pull a bet in or out of the headline live. Live KPIs that recompute on every drag: customers, revenue per customer, growth rate. A second chart answers the only question a CFO asks in a cost year: when does this stop needing internal funding, with the cost allocation and the funding line as inputs.
