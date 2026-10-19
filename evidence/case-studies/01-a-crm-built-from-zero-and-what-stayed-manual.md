@@ -43,6 +43,26 @@ flowchart TB
 
 **What stayed manual, on purpose.** The Surfe plug-in made data enrichment and the LinkedIn side much faster. What was left, mapping orders to deals when the join failed and qualifying edge cases, went to a part-time freelancer hired through Upwork. Cheaper and more reliable than automating the last edge cases.
 
+![The open deals list in HubSpot](../../assets/chapter-1/hubspot-open-deals.png)
+
+*The deals list: every draft order on Shopify is a deal, with its category, priority, stage, contacts and owner. Names and totals blurred.*
+
+![The sales pipeline as a board](../../assets/chapter-1/hubspot-pipeline-board.png)
+
+*The same pipeline as a board: in talks, demo scheduled, demo done, draft order created, draft order sent, pilot, closed won, dormant, closed lost. Cards blurred.*
+
+![The funnel as presented to the investment committee](../../assets/chapter-1/funnel-investment-committee.png)
+
+*The funnel as presented to the investment committee: MQLs ramping up, outreach following, SQLs by country, segment and lead reason, and the Autodesk plug-in as a channel.*
+
+![A HubSpot dashboard on one trigger](../../assets/chapter-1/hubspot-dashboard-plugin-downloads.png)
+
+*One trigger, one dashboard: plug-in downloads per week, how they qualified, by country and by segment.*
+
+![Lifecycle stages in HubSpot and the same stages as Google Ads conversion goals](../../assets/chapter-1/lifecycle-stages-and-google-ads-goals.png)
+
+*The lifecycle stages in HubSpot (open, MQL, SQL, hard lead, opportunity, paying customer) and the same stages wired into Google Ads as conversion goals, so the ads optimize on what sales cares about.*
+
 ## What stayed human
 
 The SQL decision. The sequences, written by people. And the reading of the numbers: the LinkedIn-to-HubSpot attribution join showed that paid social was the top of the funnel, not the last touch before a deal, which changed how the budget was judged.
