@@ -13,7 +13,7 @@ Monthly top-line reporting to corporate finance ran on a manually maintained Exc
 flowchart TB
     subgraph SRC["Sources, pulled every month"]
         direction LR
-        SH["Shopify Admin API: every order in its current state"]:::sys
+        SH["Shopify app, read-only: every order in its current state"]:::sys
         HS["HubSpot deal, joined by order number: status, market"]:::sys
         LG["Legacy orders, parsed from spreadsheets"]:::sys
     end
@@ -36,15 +36,28 @@ flowchart TB
     style HO fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
-**A pipeline, in Python, in a repository.** Three layers. Pull: the Shopify Admin API, which reports every order in its current state after edits and refunds, into raw order and transaction files. Clean: a rules engine that classifies every line and produces the clean tables: subscriptions, services, trials, monthly revenue, credit notes, cancellations, defaults, churn events, subscription chains, and a file of lines a person must look at. Report: an Excel workbook with the data tabs, the monthly metrics, the renewal chains and the subscription base.
+**A Shopify app for the data.** Built with Claude Code: a read-only app, owned by the organization, that exports every order in its current state, after edits and refunds, in the shape the pipeline needs. The CSV export was never used again.
 
-**The rules, written down before the code.** Gross sales net of VAT at order date. Revenue on an accrual basis: subscriptions spread over the service period, which can start in a later month than the order, services recognized at each payment. Adjustments treated prospectively: a refund or cancellation is booked as a reversal in the month it happens, and past reports are never restated. Orders unpaid past a threshold written off as a loss. Five VAT scenarios across countries, all handled by trusting the API's net amounts rather than rebuilding tax logic. Each rule has its case in an edge-case log, and the pipeline was validated against every one of them.
+**A pipeline, in Python, in a repository.** Three layers:
 
-**HubSpot as the second source.** Each order joins to exactly one CRM deal by order number, which is where customer status and market come from. Pre-Shopify legacy orders were parsed from spreadsheets so the renewal chains reach back to year zero.
+- Pull: orders and transactions from the Shopify app, into raw files.
+- Clean: a rules engine classifies every line into the clean tables: subscriptions, services, trials, monthly revenue, credit notes, cancellations, defaults, churn events, subscription chains. Plus a file of lines a person must look at.
+- Report: an Excel workbook with the data tabs, the monthly metrics, the renewal chains and the subscription base.
 
-**The five-year projection on top.** The clean base feeds a forecast model with scenarios and dials, the one behind the next chapter, and a strategic snapshot regenerated from the same pipeline for the investment committee.
+**The rules, written down before the code.**
 
-**The handover.** At exit, finance needed to keep cross-checking their report every month, on a Windows machine with no Python, no git and no admin rights. The pipeline was scoped down to what Shopify alone can prove, ported to PowerShell, validated line by line against the Python version, and set up so that Claude Code runs it for the finance user from a read-only Shopify app owned by the organization. One handover session on the last day. It ran.
+- Gross sales net of VAT, at order date.
+- Revenue on an accrual basis: subscriptions spread over the service period, which can start later than the order; services recognized at each payment.
+- Adjustments prospective: a refund or cancellation is a reversal in the month it happens. Past reports are never restated.
+- Unpaid past a threshold: written off as a loss.
+- VAT: five scenarios across countries, all handled by trusting the API's net amounts rather than rebuilding tax logic.
+- Every rule has its case in an edge-case log, and the pipeline was validated against each one.
+
+**HubSpot as the categorization source.** Each order joins to exactly one CRM deal by order number; customer status and market come from there. Shopify is the money, HubSpot the categories, as set up in [chapter 1](01-a-crm-built-from-zero-and-what-stayed-manual.md). Pre-Shopify legacy orders were parsed from spreadsheets so the renewal chains reach back to year zero.
+
+**The five-year projection on top.** The clean base feeds the forecast model with scenarios and dials, the one in [chapter 6](06-a-financial-model-the-leadership-team-could-click.md), and a strategic snapshot regenerated from the same pipeline for the investment committee.
+
+**The handover.** At exit, finance needed to keep cross-checking their report every month, on a Windows machine with no Python, no git and no admin rights. So: the pipeline scoped down to what Shopify alone can prove, ported to PowerShell, validated line by line against the Python version, and set up so that Claude Code runs it for the finance user from the read-only Shopify app. One handover session on the last day. It ran.
 
 ## What stayed human
 
