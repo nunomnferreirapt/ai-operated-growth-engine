@@ -48,14 +48,6 @@ flowchart TB
 
 *The three layers as the repo's README draws them: pull, clean, the legacy layer that anchors year zero, and the workbook.*
 
-![The repository layout](../../assets/chapter-5/repository-layout.png)
-
-*The repository: rules and data model written as documents, scripts per layer, the lookups a person maintains, the board layer, and real data kept out of git.*
-
-![Every report cut falls out of the clean tables as a pivot](../../assets/chapter-5/data-model-every-cut-a-pivot.png)
-
-*From the data-model note: every report cut, the monthly report, per-product splits, seats, churn, trial conversion, the renewal forecast, falls out of the clean tables as a pivot. No additional tables, one truth.*
-
 **The rules, written down before the code.**
 
 - Gross sales net of VAT, at order date.
@@ -65,17 +57,13 @@ flowchart TB
 - VAT: five scenarios across countries, all handled by trusting the API's net amounts rather than rebuilding tax logic.
 - Every rule has its case in an edge-case log, and the pipeline was validated against each one.
 
+![The repository layout](../../assets/chapter-5/repository-layout.png)
+
+*The repository: rules and data model written as documents, scripts per layer, the lookups a person maintains, the board layer, and real data kept out of git.*
+
 **HubSpot as the categorization source.** Each order joins to exactly one CRM deal by order number; customer status and market come from there. Shopify is the money, HubSpot the categories, as set up in [chapter 1](01-a-crm-built-from-zero-and-what-stayed-manual.md). Pre-Shopify legacy orders were parsed from spreadsheets so the renewal chains reach back to year zero.
 
 **The five-year projection on top.** The clean base feeds the forecast model with scenarios and dials, the one in [chapter 6](06-a-financial-model-the-leadership-team-could-click.md), and a strategic snapshot regenerated from the same pipeline for the investment committee.
-
-![The strategic snapshot, section by section](../../assets/chapter-5/strategic-snapshot-sections.png)
-
-*The strategic snapshot, regenerated from the pipeline: the single source of truth for actuals, one section per question the board asks.*
-
-![The board dashboard, every number traced to the snapshot](../../assets/chapter-5/board-dashboard-quadrants.png)
-
-*The quarterly board slide, every number traced to the snapshot. The technology committee report took half an hour to update.*
 
 **The handover.** At exit, finance needed to keep cross-checking their report every month, on a Windows machine with no Python, no git and no admin rights. So: the pipeline scoped down to what Shopify alone can prove, ported to PowerShell, validated line by line against the Python version, and set up so that Claude Code runs it for the finance user from the read-only Shopify app. One handover session on the last day. It ran.
 
@@ -85,7 +73,19 @@ The rules. Every one of them was a decision made with finance, and when I propos
 
 ## What it did
 
-Monthly reporting with Fugro's corporate finance team that reconciles to the euro. The quarterly report to the technology committee, updated from the snapshot in half an hour. The same base produced the subscription growth figures on the front page, the renewal chains behind the retention numbers, and the snapshot the five-year plan is anchored to: EBITDA from -67% in 2023 to break-even in the 2027 plan.
+Monthly reporting with Fugro's corporate finance team that reconciles to the euro. The quarterly report to the technology committee, updated from the snapshot in half an hour.
+
+![Every report cut falls out of the clean tables as a pivot](../../assets/chapter-5/data-model-every-cut-a-pivot.png)
+
+*From the data-model note: every report cut, the monthly report, per-product splits, seats, churn, trial conversion, the renewal forecast, falls out of the clean tables as a pivot. No additional tables, one truth.*
+
+![The strategic snapshot, section by section](../../assets/chapter-5/strategic-snapshot-sections.png)
+
+*The strategic snapshot, regenerated from the pipeline: the single source of truth for actuals, one section per question the board asks.*
+
+![The board dashboard, every number traced to the snapshot](../../assets/chapter-5/board-dashboard-quadrants.png)
+
+*The quarterly board slide, every number traced to the snapshot. The technology committee report took half an hour to update.* The same base produced the subscription growth figures on the front page, the renewal chains behind the retention numbers, and the snapshot the five-year plan is anchored to: EBITDA from -67% in 2023 to break-even in the 2027 plan.
 
 ## What I would do differently
 
