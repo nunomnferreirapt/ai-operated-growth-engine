@@ -34,7 +34,7 @@ flowchart TB
         AG ~~~ LV ~~~ ST ~~~ FX
     end
     MD --> PG
-    subgraph OUT["What the board sees"]
+    subgraph OUT["What the board can touch"]
         O1["Scenario envelope: conservative and ambitious shade the band, the live curve inside"]:::out
         O2["A card per bet: pitch, sliders, more dials, its own mini chart"]:::out
         O3["Live KPIs, summary table, break-even chart with funding inputs"]:::out
@@ -51,14 +51,14 @@ flowchart TB
     style OUT fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
-**The thinking first, on paper.**
+**First the thinking, on paper, by people.**
 
 - Five strategic bets from the board prep, each with a proof point, an owner, a cost and a gate date.
 - Per bet, the assumptions argued in writing: what it is, why it should hold, what would prove it.
 - Per assumption, a range, not a number: conservative, estimated, ambitious.
 - A scenario rule: which bets count in which scenario. A scenario is a composition, not a mood.
 
-**The model as a file, not a sheet.**
+**Then the model, as a file nobody can quietly change.**
 
 - One JSON file, built with Claude Code through thirteen one-shot scripts, then archived. The file is the only truth.
 - Each bet a small formula: dials and year in, euros out. Next to it, the presets, a one-line pitch and the what-and-why story.
@@ -67,14 +67,14 @@ flowchart TB
 - A trace script sweeps one slider, so the curve between presets can be seen, not just the three anchor points.
 - The editing loop: change, run the gate, read the drift, persist, update the narrative until the tie-check is green, log it.
 
-**A page the board can touch.**
+**Then the page, built in an afternoon.**
 
 - The brief came from a Claude Code agent, `lovable-expert`: spec before prompting, name what changes and what stays, pin a working state before the next change, hand off to code at the complexity wall.
 - Built in Lovable from one prompt and the JSON file, in about two hours. The rule in the prompt: parse each formula once, recompute on every drag, hard-code nothing.
 - A brand pass after the math tied, design tokens only.
 - Fixes as surgical prompts: one section, the smallest change, an explicit do-not-touch list. Kept in the repository next to the model, so the page can be regenerated.
 
-**What the board sees.**
+**What the board can touch.**
 
 - A headline total with a scenario selector. A stacked chart where conservative and ambitious shade an envelope, the board's own live curve inside it.
 - A card per bet: pitch, sliders, a "More dials" expander, a toggle that pulls the bet in or out of the headline, a mini chart on the same state.
@@ -82,7 +82,7 @@ flowchart TB
 - A second chart for the one question a CFO asks in a cost year: when does this stop needing internal funding. The funding line and the cost allocation are inputs.
 - Any slider move flips the label to "Custom". A preset name never sits over numbers it no longer describes.
 
-**Words without numbers.** The narrative notes on the page carry no figures by design. Any number copied into prose would drift from the chart. Every number shown is rendered live from the model.
+**And words without numbers.** The narrative notes on the page carry no figures by design. Any number copied into prose would drift from the chart. Every number shown is rendered live from the model.
 
 ## What stayed human
 
