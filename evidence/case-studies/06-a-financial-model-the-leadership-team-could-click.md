@@ -27,10 +27,11 @@ flowchart TB
     end
     TH --> MD
     subgraph PG["The page, built on Lovable"]
+        AG["`**Claude agent** lovable-expert: the brief, the prompt, the do-not-touch lists`"]:::sys
         LV["`**Lovable**, one prompt plus the JSON: parse each formula once, recompute on every drag`"]:::sys
         ST["Brand pass after the math ties: design tokens only"]:::sys
         FX["Surgical fixes: smallest diff, explicit do-not-touch list"]:::sys
-        LV ~~~ ST ~~~ FX
+        AG ~~~ LV ~~~ ST ~~~ FX
     end
     MD --> PG
     subgraph OUT["What the board sees"]
@@ -52,33 +53,34 @@ flowchart TB
 
 **The thinking first, on paper.**
 
-- Five strategic bets, taken from the board prep document, each with a proof point, an owner, a cost and a gate date.
-- For each bet, the assumptions argued in writing: what the bet is, why it should hold, what would prove it.
-- For each assumption, a range rather than a number: a conservative, an estimated and an ambitious value.
-- A scenario rule that says which bets count in which scenario, so a scenario is a composition, not a mood.
+- Five strategic bets from the board prep, each with a proof point, an owner, a cost and a gate date.
+- Per bet, the assumptions argued in writing: what it is, why it should hold, what would prove it.
+- Per assumption, a range, not a number: conservative, estimated, ambitious.
+- A scenario rule: which bets count in which scenario. A scenario is a composition, not a mood.
 
 **The model as a file, not a sheet.**
 
-- One JSON file, built with Claude Code through thirteen one-shot scripts that were then archived: the file is the only surviving truth.
-- Each bet is a small formula, dials and year in, euros out, with its dials, their three presets, a one-line pitch and the what-and-why story next to it.
+- One JSON file, built with Claude Code through thirteen one-shot scripts, then archived. The file is the only truth.
+- Each bet a small formula: dials and year in, euros out. Next to it, the presets, a one-line pitch and the what-and-why story.
 - 2026 is pinned to the actuals from the pipeline in [chapter 5](05-the-numbers-machine-monthly-reporting-in-python-and-a-shopify-app.md) and never moves. The sliders only move 2027 to 2030.
-- A reconcile script is the integrity gate: it recomputes every bet from its formula, diffs the result against what is stored, and ties the headline to the written narrative. On an untouched model it must report zero drift.
-- A trace script sweeps one slider at a time, so the curve between presets can be looked at, not just the three anchor points.
-- The editing loop: change a formula or a preset, run the gate, read the drift, persist, inspect the bet, update the narrative until the tie-check is green, log it.
+- A reconcile script as the gate: recompute every bet, diff against what is stored, tie the headline to the written narrative. An untouched model must show zero drift.
+- A trace script sweeps one slider, so the curve between presets can be seen, not just the three anchor points.
+- The editing loop: change, run the gate, read the drift, persist, update the narrative until the tie-check is green, log it.
 
 **A page the board can touch.**
 
-- Built in Lovable from one prompt and the JSON file, designed to ship in about two hours. The prompt fixes the data contract, the compute logic and the layout; the key rule is that the page parses each formula once and recomputes on every drag, so no number is ever hard-coded.
-- A brand pass applied after the math tied, touching design tokens only, so it could not break the wiring.
-- Lovable builds fast and breaks easily. Each correction was the smallest possible instruction, scoped to one section, with an explicit list of what not to touch. The prompts were kept in the repository next to the model, so the page can be regenerated. The method came from a Claude Code agent that turns a request into a Lovable brief: spec before prompting, name what changes and what stays, pin a working state before the next change.
+- The brief came from a Claude Code agent, `lovable-expert`: spec before prompting, name what changes and what stays, pin a working state before the next change, hand off to code at the complexity wall.
+- Built in Lovable from one prompt and the JSON file, in about two hours. The rule in the prompt: parse each formula once, recompute on every drag, hard-code nothing.
+- A brand pass after the math tied, design tokens only.
+- Fixes as surgical prompts: one section, the smallest change, an explicit do-not-touch list. Kept in the repository next to the model, so the page can be regenerated.
 
 **What the board sees.**
 
-- A headline total with a scenario selector, and a stacked chart where the conservative and ambitious curves shade an envelope with the board's own live curve inside it.
-- A card per bet: its pitch, the primary sliders, a "More dials" expander, a toggle that pulls the bet in or out of the headline, and a mini chart synced to the same state.
+- A headline total with a scenario selector. A stacked chart where conservative and ambitious shade an envelope, the board's own live curve inside it.
+- A card per bet: pitch, sliders, a "More dials" expander, a toggle that pulls the bet in or out of the headline, a mini chart on the same state.
 - Live KPIs that recompute on every drag: customers, revenue per customer, growth rate. A summary table.
-- A second chart for the only question a CFO asks in a cost year: when does this stop needing internal funding, with the funding line and the cost allocation as inputs.
-- Any slider move flips the scenario label to "Custom", so a preset name can never sit over numbers it no longer describes.
+- A second chart for the one question a CFO asks in a cost year: when does this stop needing internal funding. The funding line and the cost allocation are inputs.
+- Any slider move flips the label to "Custom". A preset name never sits over numbers it no longer describes.
 
 **Words without numbers.** The narrative notes on the page carry no figures by design. Any number copied into prose would drift from the chart. Every number shown is rendered live from the model.
 
@@ -89,7 +91,3 @@ The bets themselves, the dials and their presets. The model computes; it does no
 ## What it did
 
 The investment-committee presentations to Fugro's CEO and CFO, and the GeoDin board meetings, ran on this page. Each bet carried a proof point, an owner, a cost and a gate date, so the board could decide on evidence. The plan it showed has EBITDA at break-even in 2027.
-
-## What I would do differently
-
-Set the one open price in the model earlier. A placeholder understated it for months and anchored internal conversations low.
