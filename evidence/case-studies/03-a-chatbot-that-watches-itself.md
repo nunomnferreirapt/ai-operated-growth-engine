@@ -67,7 +67,7 @@ Every change to what the bot knows or how it behaves. The handoff of anyone who 
 
 ## What it did
 
-Two closed deals in four months, one of them logged in the CRM under the name "Chatbot" by whoever created it; together they repaid the build cost more than twice over. Most real conversations were in German, from existing customers with licensing questions, and customers started treating the bot as the front door, including returning ones. Troubleshooting questions were pointed to the docs portal, which has its own off-the-shelf GitBook assistant answering from the documentation itself (see [chapter 4](04-docs-as-code-three-sites.md)).
+Two closed deals in four months, which together repaid the build cost more than twice over. Most real conversations were in German, from existing customers with licensing questions, and customers started treating the bot as the front door, including returning ones. Troubleshooting questions were pointed to the docs portal, which has its own off-the-shelf GitBook assistant answering from the documentation itself (see [chapter 4](04-docs-as-code-three-sites.md)).
 
 ## What broke
 
