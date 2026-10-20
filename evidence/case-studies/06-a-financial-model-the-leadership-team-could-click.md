@@ -82,9 +82,9 @@ flowchart TB
 - A second chart for the one question a CFO asks in a cost year: when does this stop needing internal funding. The funding line and the cost allocation are inputs.
 - Any slider move flips the label to "Custom". A preset name never sits over numbers it no longer describes.
 
-[![The forecast page, walked through in under two minutes. Click to play.](../../assets/chapter-6/forecast-page-poster.png)](../../assets/chapter-6/forecast-page-walkthrough.mp4?raw=true)
+https://github.com/user-attachments/assets/c4ed2ea6-3d1b-4c86-9fc2-b1e16eeae5ce
 
-*The page in motion, 1 min 42 s, numbers blurred: the scenario selector moving the headline curve inside its envelope, a bet card with its sliders and the toggle that pulls it out of the headline, the KPIs recomputing on every drag, and the break-even chart with its editable funding row. Click the image to play.*
+*The page in motion, 1 min 42 s, numbers blurred: the scenario selector moving the headline curve inside its envelope, a bet card with its sliders and the toggle that pulls it out of the headline, the KPIs recomputing on every drag, and the break-even chart with its editable funding row. [Download the file](../../assets/chapter-6/forecast-page-walkthrough.mp4?raw=true).*
 
 **And words without numbers.** The narrative notes on the page carry no figures by design. Any number copied into prose would drift from the chart. Every number shown is rendered live from the model.
 
