@@ -1,4 +1,4 @@
-# Articles that platforms chose to publish
+# Articles placed on industry platforms
 
 *Long-form pieces produced for independent industry platforms: a profile per platform, research in parallel from the company's own knowledge and from real assistant-prompt data, one writer, a verification stage, and a person who pitches and places the piece. The rebuild is two tools anyone can run.*
 

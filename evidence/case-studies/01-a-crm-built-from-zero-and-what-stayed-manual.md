@@ -45,7 +45,7 @@ flowchart TB
 
 ![The open deals list in HubSpot](../../assets/chapter-1/hubspot-open-deals.png)
 
-*The deals list: every draft order on Shopify is a deal, with its category, priority, stage, contacts and owner. Names and totals blurred.*
+*The deals list: every draft order on Shopify is a deal, with its category, priority, stage, contacts and owner. Names, totals and amounts blurred.*
 
 ![The sales pipeline as a board](../../assets/chapter-1/hubspot-pipeline-board.png)
 

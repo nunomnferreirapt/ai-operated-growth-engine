@@ -2,7 +2,7 @@
 
 The AI operating system that let a team of one run a full go-to-market function: paid acquisition, content, three documentation sites, a customer-facing chatbot, sales enablement, customer intelligence and monthly reporting. Built and run in production in 2026 for GeoDin, Fugro's geotechnical data management software, on top of a go-to-market rebuilt from 2023, while subscriptions went from 1% of its external sales (2023) to ~90% expected for 2026, and perpetual licensing went to zero.
 
-This repository shows the system as built, sanitized. It is a showcase, not a kit. The case studies explain what ran and why it took this shape, and the architecture notes document the patterns. Customer data, pricing and internal addresses stay out.
+This repository shows the system as built, sanitized. It is a showcase, not a kit. The case studies explain what ran and why it took this shape, and the architecture notes document the patterns. Customer names and internal addresses stay out. The prose uses relative figures only; the chapter 0 screenshots show the 2024 public price list and the migration campaign as customers saw them.
 
 ## How it fits together
 
@@ -23,7 +23,7 @@ flowchart TB
         C2["2 · Paid media that ends in a person"]:::sys --> C1["1 · CRM, from lead to deal"]:::sys
         C3["3 · Chatbot with a versioned brain"]:::sys --> C1
         C4["4 · Docs as code, three sites"]:::sys
-        C7["7 · Articles that platforms chose to publish"]:::sys --> C1
+        C7["7 · Articles placed on industry platforms"]:::sys --> C1
     end
     subgraph ST["Steering the business"]
         direction LR
@@ -68,7 +68,7 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 - [A CRM built from zero, and what stayed manual](evidence/case-studies/01-a-crm-built-from-zero-and-what-stayed-manual.md). The data model, the triggers that make a marketing-qualified lead, the criteria that make a sales-qualified one, the Shopify link, and the freelancer who handled what did not make sense to automate.
 - [Paid media that ends in a human follow-up](evidence/case-studies/02-paid-media-that-ends-in-a-human-follow-up.md). Campaigns customized across 20+ segments, each wired from LinkedIn ad to HubSpot sequence to a Teams notification that tags who follows up; and the monthly budget review that decided where the money went next.
 - [A chatbot that watches itself](evidence/case-studies/03-a-chatbot-that-watches-itself.md). Built with two freelancers for about USD 2k, live in under a month, two closed deals in four months; its knowledge base is a versioned, PR-reviewed repo, and a weekly drift watch proposes the edits.
-- [Articles that platforms chose to publish](evidence/case-studies/07-articles-that-platforms-chose-to-publish.md). A profile per platform, three research agents including one on real assistant-prompt data, one writer, a verification stage, a person who places the piece; by mid-2026 the assistants were referring leads. Rebuilt as two tools anyone can run.
+- [Articles placed on industry platforms](evidence/case-studies/07-articles-placed-on-industry-platforms.md). A profile per platform, three research agents including one on real assistant-prompt data, one writer, a verification stage, a person who places the piece; by mid-2026 the assistants were referring leads. Rebuilt as two tools anyone can run.
 - [Docs as code, three sites](evidence/case-studies/04-docs-as-code-three-sites.md). From a legacy archive nobody used to self-service docs for new users and deep reference for power users, built from help files, support portal and demo transcripts through a PR-gated pipeline and kept in sync by a drift watch.
 
 *Steering the business*
@@ -84,7 +84,7 @@ Figures as published on LinkedIn; the euro values behind them stay private.
 
 ## What is left out, and why
 
-- Customer names, pricing logic, partner terms, and every absolute figure: sales, revenue base, pipeline, costs, customer and seat totals. Confidentiality toward the former employer holds. The figures that do appear are relative ones (shares, growth rates, ratios and funnel counts), already published on LinkedIn.
+- Customer names, pricing logic, partner terms, and absolute figures in the prose: sales, revenue base, pipeline, costs, customer and seat totals. Confidentiality toward the former employer holds. The figures in the text are relative ones (shares, growth rates, ratios and funnel counts), already published on LinkedIn. Two exceptions, on purpose: the chapter 0 boards show the 2024 public price list, the migration campaign and its customer count as customers saw them; the chapter 4 table shows page, word and commit counts of the documentation sites.
 
 ## Who built this
 
@@ -93,3 +93,5 @@ Nuno Ferreira, who builds growth engines: the systems that produce the revenue. 
 Built with AI, mostly Claude Code, with OpenAI and Perplexity Pro along the way. The architecture, the agent design, the evaluation and every call on what reached customers stayed human: Nuno and the team.
 
 More on [LinkedIn](https://www.linkedin.com/in/nunomnferreira).
+
+**License.** Text and diagrams are CC BY 4.0, see `LICENSE`. Screenshots, logos and third-party images are excluded and stay with their owners.

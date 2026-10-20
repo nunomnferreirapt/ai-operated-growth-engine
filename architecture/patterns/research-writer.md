@@ -16,4 +16,4 @@ Research benefits from several views; prose does not. One writer keeps one voice
 
 ## Where it ran
 
-Long-form articles that independent platforms chose to publish: the story, what it produced and what broke are in [chapter 7](../../evidence/case-studies/07-articles-that-platforms-chose-to-publish.md); the rebuild is [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline).
+Long-form articles placed on independent industry platforms: the story, what it produced and what broke are in [chapter 7](../../evidence/case-studies/07-articles-placed-on-industry-platforms.md); the rebuild is [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline).

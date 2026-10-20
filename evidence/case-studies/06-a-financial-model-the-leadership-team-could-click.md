@@ -84,10 +84,6 @@ flowchart TB
 
 **And words without numbers.** The narrative notes on the page carry no figures by design. Any number copied into prose would drift from the chart. Every number shown is rendered live from the model.
 
-https://github.com/user-attachments/assets/af429ea3-10ae-4d59-a733-ace2136b16e1
-
-*A walk through the page, 1 min 42 s, numbers blurred. Watch the scenario selector move the headline curve inside its envelope, a bet card with its sliders and the toggle that pulls it out of the headline, the KPIs recomputing on every drag, and the break-even chart with its editable funding row.*
-
 > [!NOTE]
 > **A side project in the same tool.** Microsoft Copilot was the one AI tool Fugro allowed, so I built a two-hour hands-on workshop on it for the Strategy and Accelerated Business Build teams: a live Copilot demo, two exercises on real documents, how to build a custom agent for a recurring task, and a look at the tools beyond Copilot. The workshop page is a Lovable app too: [AI Kitchen: Practical AI for Strategy & ABB](https://training-abb-copilot.lovable.app/).
 
