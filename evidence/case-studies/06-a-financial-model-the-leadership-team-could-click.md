@@ -84,7 +84,7 @@ flowchart TB
 
 https://github.com/user-attachments/assets/c4ed2ea6-3d1b-4c86-9fc2-b1e16eeae5ce
 
-*The page in motion, 1 min 42 s, numbers blurred: the scenario selector moving the headline curve inside its envelope, a bet card with its sliders and the toggle that pulls it out of the headline, the KPIs recomputing on every drag, and the break-even chart with its editable funding row. [Download the file](../../assets/chapter-6/forecast-page-walkthrough.mp4?raw=true).*
+*A walk through the page, 1 min 42 s, numbers blurred. Watch the scenario selector move the headline curve inside its envelope, a bet card with its sliders and the toggle that pulls it out of the headline, the KPIs recomputing on every drag, and the break-even chart with its editable funding row.*
 
 **And words without numbers.** The narrative notes on the page carry no figures by design. Any number copied into prose would drift from the chart. Every number shown is rendered live from the model.
 
