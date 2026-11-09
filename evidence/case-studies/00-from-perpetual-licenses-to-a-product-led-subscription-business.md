@@ -1,6 +1,6 @@
 # From perpetual licenses to a product-led subscription business
 
-*Before: an old website that read as documentation for power users, an offering nobody could parse, no self-checkout. After: one product, three variants, trial first, online checkout, and a subscription base that carries the business.*
+*Before: an old website that read as documentation for power users, an offering nobody could parse, no self-checkout. After: one product, two variants, trial first, online checkout, and a subscription base that carries the business.*
 
 ## Before
 
@@ -44,7 +44,7 @@ flowchart TB
     style N fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
-1. **One offer instead of dozens.** The legacy modules were consolidated into one product with per-user pricing. Later it grew into a suite of three: the desktop database, a field app for tablets, and a plug-in for Civil 3D. Prices went on the website. Seat tiers were built so that adding a seat never makes the bill cheaper, which sounds obvious and is not how most volume schedules behave.
+1. **One offer instead of dozens.** The legacy options were consolidated into one product, sold as a single-user or shared license. Later it grew into a suite of three: the desktop database, a field app for tablets, and a plug-in for Civil 3D. Prices went on the website. Seat tiers were built so that adding a seat never makes the bill cheaper, which sounds obvious and is not how most volume schedules behave.
 
 2. **A path for the existing base.** Every legacy customer got an offer to move onto an annual subscription priced on value, with a discount schedule that stepped down over the first years. Nobody was forced. 40% of the legacy base migrated, at 3.8 times the average value per customer, so the migrated book alone is 1.5 times the entire 2023 perpetual base. 49 customers who had lapsed came back.
 
