@@ -10,16 +10,6 @@ GeoDin is Fugro's geotechnical data management software. It has been built in Be
 
 Four moves, roughly in this order.
 
-Key:
-
-```mermaid
-flowchart LR
-    K1(["A person decides or acts"]):::human ~~~ K2["A step a system runs"]:::sys ~~~ K3["`**Claude** skill or agent: a step Claude runs`"]:::sys ~~~ K4["What comes out"]:::out
-    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
-    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
-    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
-```
-
 ```mermaid
 %%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
@@ -53,6 +43,8 @@ flowchart TB
     style E fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
     style N fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
+
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
 
 1. **One offer instead of dozens.** The legacy options were consolidated into one product, sold as a single-user or shared license. Later it grew into a suite of three: the desktop database, a field app for tablets, and a plug-in for Civil 3D. Prices went on the website. Seat tiers were built so that adding a seat never makes the bill cheaper, which sounds obvious and is not how most volume schedules behave.
 

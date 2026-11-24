@@ -21,16 +21,6 @@ So the work became: build an operating system of AI agents that does the repeata
 
 Of the list above, the pricing, the product decisions and the team were decided by people and stayed that way (more under "What stayed human"). Everything else had repeatable work in it, and that is what the operating system was built to run. Five parts:
 
-Key:
-
-```mermaid
-flowchart LR
-    K1(["A person decides or acts"]):::human ~~~ K2["A step a system runs"]:::sys ~~~ K3["`**Claude** skill or agent: a step Claude runs`"]:::sys ~~~ K4["What comes out"]:::out
-    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
-    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
-    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
-```
-
 ```mermaid
 %%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
@@ -70,6 +60,8 @@ flowchart TB
     style L3 fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
     style L4 fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
+
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
 
 **1. One source of truth.** Everything the product says about itself in public (website, documentation, support articles, marketplace listing) is crawled weekly into one folder under git. One rule: generated text is never a source. The agents cannot quote our own marketing copy back at us.
 

@@ -8,16 +8,6 @@ A contact form and an email address. Prospects with a question waited for office
 
 ## What we built
 
-Key:
-
-```mermaid
-flowchart LR
-    K1(["A person decides or acts"]):::human ~~~ K2["A step a system runs"]:::sys ~~~ K3["`**Claude** skill or agent: a step Claude runs`"]:::sys ~~~ K4["What comes out"]:::out
-    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
-    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
-    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
-```
-
 ```mermaid
 %%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
@@ -40,6 +30,8 @@ flowchart TB
     classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
     style BR fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
+
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
 
 **A small expert team instead of an agency.** We wrote the spec and hired two freelancers through Upwork: one on the n8n engineering (the agent workflow, the tools it can call, the CRM hookup), one on the conversation design (intent lanes, qualification, the Miro flows). Weekly design sessions on the n8n canvas. Live on the website in under a month, for about USD 2k.
 
