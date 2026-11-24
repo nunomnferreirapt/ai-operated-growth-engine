@@ -61,6 +61,8 @@ flowchart TB
     style L4 fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 **1. One source of truth.** Everything the product says about itself in public (website, documentation, support articles, marketplace listing) is crawled weekly into one folder under git. One rule: generated text is never a source. The agents cannot quote our own marketing copy back at us.
 
 **2. Skills, not chats.** About twenty repeatable workflows, each written down as a file and run the same way every time. One writes articles: three research agents first, then one writer. One turns any source (a call transcript, a support thread, a spec) into gap lists per product and a pull request on the docs. One strips personal data from transcripts before a model reads them.

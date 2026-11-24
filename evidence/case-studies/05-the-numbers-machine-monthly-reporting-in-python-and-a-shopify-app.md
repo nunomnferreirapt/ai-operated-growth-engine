@@ -36,6 +36,8 @@ flowchart TB
     style HO fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 **A Shopify app for the data.** Built with Claude Code: a read-only app, owned by the organization, that exports every order in its current state, after edits and refunds, in the shape the pipeline needs. The CSV export was never used again.
 
 **A pipeline, in Python, in a repository.** Three layers:

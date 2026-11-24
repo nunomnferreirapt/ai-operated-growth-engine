@@ -21,6 +21,8 @@ flowchart TB
     classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
 ```
 
+<img src="../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 ## What it does
 
 1. **Index.** Crawlers refresh the knowledge vault from the website, the documentation, the support articles and the marketplace listing. The vault is under git, so every refresh is a diff.

@@ -30,6 +30,8 @@ flowchart TB
     style RS fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 **A profile per platform.** Before any article, a skill researched the target platform and wrote its profile: editorial patterns, tone, structure, audience, what it rejects. Four platforms were profiled. The profile decided the mode of the piece: name the product, where the platform allows it, or build authority without a product link, where it does not.
 
 **Research in parallel, three angles.** From the brief, three agents ran at once. A technical researcher read the company's own knowledge: the crawled docs, the demo transcripts, the competitor context. A prompt strategist read exports of real prompts people type into assistants, so the structure of the piece answered the questions engineers actually ask. An industry analyst stayed outside the company's files on purpose and collected third-party data and public project examples that a reader could verify.

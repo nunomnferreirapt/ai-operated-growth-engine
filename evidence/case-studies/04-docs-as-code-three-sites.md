@@ -32,6 +32,8 @@ flowchart TB
     style SRC fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 **Docs as a software project.** Three public repositories, one per product, rendered as websites on GitBook, whose built-in assistant answers visitors from the pages themselves. A private companion repository with the audit, the rulebook and the migration plan. Every legacy help topic was indexed and mapped to a destination page or marked for retirement; the result was a list of work packages, not a vague ambition.
 
 ![The docs site as published, with the GitBook assistant](../../assets/chapter-4/docs-site-with-assistant.png)

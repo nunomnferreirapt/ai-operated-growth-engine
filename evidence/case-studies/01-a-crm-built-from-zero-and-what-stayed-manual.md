@@ -31,6 +31,8 @@ flowchart TB
     style IN fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 **HubSpot, from an empty account.** Contacts, companies and deals, with one sales pipeline whose stages matched how deals actually moved: a technical demo, talks, a draft order, closed, or dormant. Three fields on every deal drive everything downstream, including the financial reporting: the subscription type (new, renewal, expansion), the market (German-speaking or not), and the customer type (new, reactivated, migrated).
 
 **One offer, one deal.** Shopify and HubSpot are integrated: every draft order created on Shopify creates a HubSpot deal automatically. For sales operations that meant every offer with a real chance of closing landed with the right sales rep, nothing fell between the two systems, and every order got classified in HubSpot (subscription type, market, customer type) for the financial reporting. Shopify is the financial source of truth; HubSpot is the source of truth for the categories. That pair is what later let the reporting pipeline classify sales by customer status and region without anyone re-keying anything.

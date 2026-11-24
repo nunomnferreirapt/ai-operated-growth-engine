@@ -44,6 +44,8 @@ flowchart TB
     style N fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 1. **One offer instead of dozens.** The legacy options were consolidated into one product, sold as a single-user or shared license. Later it grew into a suite of three: the desktop database, a field app for tablets, and a plug-in for Civil 3D. Prices went on the website. Seat tiers were built so that adding a seat never makes the bill cheaper, which sounds obvious and is not how most volume schedules behave.
 
 2. **A path for the existing base.** Every legacy customer got an offer to move onto an annual subscription priced on value, with a discount schedule that stepped down over the first years. Nobody was forced. 40% of the legacy base migrated, at 3.8 times the average value per customer, so the migrated book alone is 1.5 times the entire 2023 perpetual base. 49 customers who had lapsed came back.

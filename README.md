@@ -41,6 +41,8 @@ flowchart TB
     style ST fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 The working rule: the system detects and drafts, a person approves. No loop posts, merges or publishes on its own. A loop ends in a proposal, an accepted proposal becomes a pull request, and a person merges it, often Nuno. Every change sits in a history anyone in the team can read.
 
 The real system belongs to the company it was built for and cannot be published. Three of its patterns are rebuilt fresh, generic and runnable: [platform-profile](https://github.com/nunomnferreirapt/platform-profile) (the git-tracked knowledge profile agents cite, and the manifest that decides what runs), [article-pipeline](https://github.com/nunomnferreirapt/article-pipeline) (parallel research, one writer, a fact-check gate), [source-to-docs](https://github.com/nunomnferreirapt/source-to-docs) (scrub, gap pass, proposal as a pull request, drift watch). Each README says what it rebuilds.

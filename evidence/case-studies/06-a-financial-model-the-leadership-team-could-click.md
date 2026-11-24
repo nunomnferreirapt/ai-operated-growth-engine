@@ -51,6 +51,8 @@ flowchart TB
     style OUT fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 **First the thinking, on paper, by people.**
 
 - Five strategic bets from the board prep, each with a proof point, an owner, a cost and a gate date.

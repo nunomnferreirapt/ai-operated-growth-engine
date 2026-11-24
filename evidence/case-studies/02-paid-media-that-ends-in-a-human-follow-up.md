@@ -30,6 +30,8 @@ flowchart TB
     style M fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="../../assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 
 **Segments, not one campaign.** More than 20 segments, cut by market, by role and by the problem the engineer has: migrating off an end-of-life incumbent, logging boreholes in the field, getting ground data into Civil 3D. Each segment got its own creative, its own lead magnet and its own landing. The ad copy and the lead form came from a Claude skill that read the product and competitor files and the house tone, and returned two variants, one conservative and one with a stronger hook, in the segment's language; a person picked, edited and launched. Campaigns ran in the local language, including Brazil and Turkey, where the regulatory context does part of the selling.
 
